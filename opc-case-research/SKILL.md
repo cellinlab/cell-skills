@@ -46,6 +46,7 @@ If the user does not specify otherwise, assume:
 - write in Chinese
 - prioritize content strategy, IP building, and monetization
 - analyze one case at a time
+- include a minimum evidence slice in `standard` and `deep` outputs
 
 ## Workflow
 
@@ -126,7 +127,32 @@ Use cautious language for:
 
 Read [references/evidence-schema.md](references/evidence-schema.md) when building evidence tables or appendices.
 
-### 6. Produce the Right Deliverable
+### 6. Build a Minimum Evidence Slice
+
+Even in `standard` mode, do not leave evidence fully implicit.
+
+Default to a minimum evidence slice with 6-12 rows or bullet-equivalents that support the most important claims across:
+
+- identity or self-positioning
+- timeline
+- content or IP
+- channels
+- business model
+
+If the user did not ask for tables, the evidence slice can be a compact appendix or a short "evidence snapshot" section instead of a full spreadsheet.
+
+### 7. Shrink Claims When Public Information Is Thin
+
+When evidence is weak, incomplete, or highly indirect:
+
+- narrow the scope instead of compensating with confident writing
+- separate `confirmed facts`, `best-effort inferences`, and `unknowns`
+- reduce the depth of business-model claims first
+- keep a `to verify next` list if the case is still worth researching
+
+A smaller but more reliable output is better than a complete-looking report built on speculation.
+
+### 8. Produce the Right Deliverable
 
 Choose the smallest deliverable that still answers the user.
 
@@ -147,12 +173,13 @@ For `standard`, produce:
 - content and IP analysis
 - channel analysis
 - business model analysis
+- evidence snapshot or minimum evidence slice
 - replicability analysis
 - limitations and unknowns
 
 For `deep`, add:
 
-- evidence table
+- full evidence table
 - content sampling table
 - business model table
 - estimate disclosures when needed
@@ -168,6 +195,7 @@ Always aim for:
 - research tone, not fan tone
 - visible structure
 - evidence awareness
+- at least a small evidence trail for the main claims
 - explicit dates or time ranges when claims depend on time
 - direct linkage between content strategy, channel choice, and business model
 - actionable takeaways for people studying super-individual paths

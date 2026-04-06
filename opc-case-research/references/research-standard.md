@@ -146,7 +146,20 @@ At minimum include:
 
 Target length can vary. What matters is dimension coverage and traceability.
 
-### 5.3 Evidence Library
+### 5.3 Minimum Evidence Slice
+
+Even a standard report should include a compact evidence slice rather than hiding all support inside prose.
+
+Recommended minimum:
+
+- 6-12 evidence rows or bullet-equivalents
+- coverage across identity, timeline, content, channel, and business model
+- direct links or clearly named source anchors
+- date or time range whenever the claim is time-sensitive
+
+If the user did not ask for a table, this can appear as an "evidence snapshot" appendix.
+
+### 5.4 Evidence Library
 
 Provide structured evidence when doing deeper work.
 
@@ -164,7 +177,7 @@ Suggested fields:
 - related dimension
 - remarks
 
-### 5.4 Visual Appendices
+### 5.5 Visual Appendices
 
 When useful, include at least two of:
 
@@ -268,6 +281,12 @@ Then answer:
 - single-platform or single-product concentration risks
 - personal dependency vs scalability
 
+If business evidence is thin:
+
+- downgrade claims to "possible structure" or "visible clues"
+- move unsupported items into open questions
+- avoid pretending to know the actual revenue mix
+
 ### Step 6: Review Key Decisions
 
 For each key node, try to explain:
@@ -297,6 +316,19 @@ Always separate:
 - high-barrier or non-replicable factors
 
 Avoid empty slogans. Explain why each item falls into that bucket.
+
+### Step 8: Apply the Insufficient-Information Fallback
+
+When the public record is too thin for a full structured report, do not force completeness.
+
+Fallback output should prioritize:
+
+- confirmed facts
+- best-effort inferences with logic stated
+- unknowns and pending verification
+- next-search suggestions if the case still matters
+
+This fallback is still a valid research output.
 
 ## 7. Report Dimensions
 
@@ -388,6 +420,7 @@ Focus on:
 - cover the core dimensions
 - provide a usable timeline
 - keep evidence traceable
+- include at least a minimum evidence slice in standard or deep outputs
 - separate facts, inferences, and unknowns
 - analyze business structure instead of using slogans
 - let conclusions point back to sources
@@ -410,6 +443,7 @@ Focus on:
 - Did I ignore dates and time windows
 - Did I skip revenue structure or conversion analysis
 - Did I skip replicability
+- Did I force a complete business story when the public evidence was too weak
 
 ## 9. Uncertainty Disclosure
 

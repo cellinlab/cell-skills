@@ -14,7 +14,7 @@ Use this structure when the user asks for a standard or deep case study.
 8. Values, thinking models, and method
 9. Replicability analysis
 10. Lessons for the target reader
-11. Open questions and research limits
+11. Open questions, research limits, and fallback conclusion
 12. Appendices
 
 ## Writing Guidance by Section
@@ -27,6 +27,7 @@ Answer in a compact form:
 - why it matters
 - what is distinctive
 - what people studying super-individual paths should pay attention to
+- what evidence most strongly supports the core conclusion
 
 ### 2. Basic Profile
 
@@ -114,6 +115,8 @@ List:
 - weak evidence areas
 - unresolved conflicts
 - important unknowns
+- what can be stated safely despite the gaps
+- what should be treated only as a clue or inference
 
 ### 12. Appendices
 

@@ -88,7 +88,28 @@ Suggested columns:
 | evidence_source | direct source URL or page |
 | remarks | uncertainty or additional note |
 
-## 5. Status Guidance
+## 5. Minimum Evidence Slice Guidance
+
+Use this when the user wants a standard report but not a full database export.
+
+Recommended minimum:
+
+- 6-12 entries
+- at least 1 entry for identity or self-positioning
+- at least 2 entries for timeline
+- at least 1 entry for content or IP
+- at least 1 entry for channels
+- at least 1 entry for business model or monetization clues
+
+Acceptable formats:
+
+- a short table
+- a bullet list with direct links
+- a compact appendix called `evidence snapshot`
+
+The goal is to leave a visible audit trail for the most important claims.
+
+## 6. Status Guidance
 
 Use `fact` when a public source directly supports the point.
 
@@ -96,7 +117,16 @@ Use `inference` when the point is a reasoned conclusion based on multiple signal
 
 Use `unknown` when the available evidence does not justify a conclusion.
 
-## 6. Estimate Guidance
+## 7. Weak-Evidence Handling
+
+If an important dimension is thin on public evidence:
+
+- keep the row, but label it `unknown` or `inference`
+- explain the missing variable in `remarks`
+- prefer `visible clue` wording over definitive wording
+- do not convert absence of evidence into a confident negative conclusion
+
+## 8. Estimate Guidance
 
 When a table includes estimates:
 
