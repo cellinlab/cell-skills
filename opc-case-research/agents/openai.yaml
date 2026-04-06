@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPC 案例调研"
+  short_description: "系统化拆解OPC、一人公司与创作者IP商业路径案例"
+  default_prompt: "Use $opc-case-research to research this creator, OPC, or one-person company case in Chinese, focusing on content strategy, IP positioning, and business model."
