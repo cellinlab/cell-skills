@@ -2,18 +2,24 @@
 
 ## Table of Contents
 
-- 1. Choose the entry point
+- 1. Choose the mode and entry point
 - 2. Stage 1 checklist
-- 3. Viewpoint clustering rules
+- 3. Clustering rules
 - 4. Logic mapping rules
 - 5. Stage 2 checklist
 - 6. Stage 3 checklist
 - 7. One-shot mode
 - 8. Common failure patterns
 
-## 1. Choose the Entry Point
+## 1. Choose the Mode and Entry Point
 
 Start from Stage 1 by default.
+
+Choose one of these modes first:
+
+- source-driven: the user provides transcripts, notes, interviews, speeches, or scattered material
+- draft-deepening: the user provides a rough draft, partial article, or stable outline that needs depth
+- topic-driven: the user provides a topic, thesis, question, angle, or writing intent but not a full source text
 
 Move directly to Stage 2 only when the user already provides a stable outline or asks specifically for structure refinement.
 
@@ -30,6 +36,7 @@ Even when jumping ahead, rebuild a lightweight internal brief first. Do not draf
 
 Infer the following from the material and the request:
 
+- mode
 - target audience
 - reading scenario
 - writing purpose
@@ -67,9 +74,29 @@ Detect and mark:
 
 Do not delete before understanding the role of the passage. Repetition can signal importance.
 
-### 2.4 Extract Viewpoint Units
+Skip this subsection when the task is purely topic-driven and there is no source material to clean.
 
-Break the material into viewpoint units instead of paragraph-shaped chunks.
+### 2.4 Build the Argument Base
+
+For topic-driven mode, build a minimal argument base before outlining:
+
+- central question
+- working thesis
+- 3-5 core angles
+- likely objections or boundary conditions
+- known examples, evidence, or missing evidence
+
+For draft-deepening mode, diagnose:
+
+- the current thesis quality
+- thin sections
+- missing mechanisms
+- unsupported jumps
+- duplicated claims
+
+### 2.5 Extract Viewpoint or Argument Units
+
+Break the material into viewpoint units or argument units instead of paragraph-shaped chunks.
 
 Useful unit types:
 
@@ -80,9 +107,9 @@ Useful unit types:
 - contrast
 - implication
 
-This makes clustering more reliable than operating on raw paragraphs.
+This makes clustering more reliable than operating on raw paragraphs or raw notes.
 
-## 3. Viewpoint Clustering Rules
+## 3. Clustering Rules
 
 Merge units when they point to the same thesis even if the wording, example, or confidence level differs.
 
@@ -95,6 +122,14 @@ Keep units separate when they differ in:
 - speaker perspective
 
 Use the cluster output to preserve nuance while removing duplication.
+
+For topic-driven mode, cluster by argumentative role as well as semantic similarity. Two claims may sound related but still belong to different jobs:
+
+- thesis
+- mechanism
+- evidence
+- counterpoint
+- implication
 
 Recommended cluster format:
 
@@ -111,7 +146,7 @@ Do not reduce three complementary fragments into a flatter sentence. Merge by in
 
 ## 4. Logic Mapping Rules
 
-Map the strongest visible relations in the source material.
+Map the strongest visible relations in the source material or the strongest argument path for topic-driven writing.
 
 Use these relation types as defaults:
 
@@ -128,7 +163,16 @@ When the material is weakly structured, force a minimum chain:
 3. consequence
 4. implication
 
-If the source does not support a clean chain, say so instead of inventing one.
+If the source or topic does not support a clean chain, say so instead of inventing one.
+
+For topic-driven mode, common high-level structures include:
+
+- question -> answer -> mechanism -> implication
+- problem -> diagnosis -> principle -> solution -> limit
+- misconception -> correction -> evidence -> conclusion
+- observation -> interpretation -> consequence -> action
+
+Choose the structure that best serves the reader, not the most decorative one.
 
 ## 5. Stage 2 Checklist
 
@@ -137,7 +181,9 @@ Treat Stage 2 as a structure-locking step.
 Do all of the following:
 
 - start from the accepted brief and viewpoint clusters
-- keep the macro frame when possible
+- keep the macro frame when possible in source-driven mode
+- keep the strongest existing frame and repair weak branches in draft-deepening mode
+- choose the clearest reader path in topic-driven mode
 - merge duplicate branches
 - reorder only adjacent or clearly misplaced blocks
 - assign each section a main claim
@@ -150,6 +196,7 @@ Mark changes explicitly:
 - `合并重复观点`
 - `顺序微调`
 - `新增过渡`
+- `按命题重建结构`
 
 Do not generate the full article here. Keep the output structural.
 
@@ -173,6 +220,8 @@ Avoid generic expansion such as:
 - unrelated facts added only to increase length
 
 Prefer precise, readable Chinese over literal transcript residue.
+
+For topic-driven mode, make sure each section advances the thesis instead of circling around it in different words.
 
 ## 7. One-Shot Mode
 
@@ -207,7 +256,17 @@ Fix:
 
 - compare each section against the brief and the merged viewpoints
 
-### 8.3 Duplicate Claims in Different Sections
+### 8.3 Thesis Drift
+
+Symptom:
+
+- the article begins on one question and ends on another
+
+Fix:
+
+- compare each section against the brief and the locked Stage 2 section jobs
+
+### 8.4 Duplicate Claims in Different Sections
 
 Symptom:
 
@@ -217,7 +276,7 @@ Fix:
 
 - re-cluster the sections and assign one home for each major claim
 
-### 8.4 Logic Jumps
+### 8.5 Logic Jumps
 
 Symptom:
 
@@ -227,7 +286,7 @@ Fix:
 
 - add explicit transition sentences or reorder the local block
 
-### 8.5 Transcript Residue
+### 8.6 Transcript Residue
 
 Symptom:
 

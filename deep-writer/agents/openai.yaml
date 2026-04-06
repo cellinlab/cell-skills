@@ -1,4 +1,4 @@
 interface:
   display_name: "深度写作"
-  short_description: "把访谈播客逐字稿与碎片笔记整理成可确认的深度写作流程"
-  default_prompt: "Use $deep-writer to turn this transcript, draft, speech, article, or notes into staged deep writing in Chinese: brief and logic first, structure second, full draft last."
+  short_description: "适用于主题写作草稿深化与素材整理的通用深度内容写作技能"
+  default_prompt: "Use $deep-writer to create or refine deep Chinese content from a topic, thesis, outline, draft, transcript, article, or notes: brief and logic first, structure second, full draft last."

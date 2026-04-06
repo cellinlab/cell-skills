@@ -13,12 +13,13 @@
 
 Before delivering the result, make sure all of the following are true:
 
-- the author's core meaning is preserved
+- the author's core meaning is preserved when source material exists
+- the central thesis is stable when the piece is topic-driven
 - obvious duplicate viewpoints have been merged
 - the logic chain is visible at section level
 - the structure matches the accepted Stage 2 outline
 - supplemental content is relevant, not decorative
-- the prose reads like formal writing rather than raw transcript
+- the prose reads like formal writing rather than raw transcript or brainstorming notes
 
 ## 2. Final Review Questions
 
@@ -34,6 +35,8 @@ Ask these questions before finalizing:
 8. Is the language appropriate for the inferred audience?
 9. If the user gave no audience, are the assumptions stated clearly?
 10. If the source material was spoken, does the result now read like writing?
+11. If the piece is topic-driven, does each section genuinely advance the thesis?
+12. If data or examples are mentioned, are they actually supported?
 
 ## 3. Spoken-Language Cleanup Rules
 
@@ -84,6 +87,10 @@ Local paragraph-level improvements are still allowed:
 - adjust sentence order
 - fold duplicated support into one place
 
+In source-driven mode, preserving structure means preserving the source's core frame.
+
+In topic-driven mode, preserving structure means preserving the accepted thesis path and section jobs.
+
 ## 6. Revision Triggers
 
 Revise before delivery if any of the following is true:
@@ -93,3 +100,4 @@ Revise before delivery if any of the following is true:
 - one section is much shallower than the rest
 - the conclusion introduces ideas not prepared earlier
 - the brief and the final draft no longer describe the same article
+- the article sounds broad and serious but still cannot answer its own core question
