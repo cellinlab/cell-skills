@@ -5,9 +5,10 @@
 - 1. Non-negotiables
 - 2. Cell-style checklist
 - 3. Anti-AI cleanup
-- 4. Overacting warnings
-- 5. Rewrite heuristics
-- 6. Banned patterns
+- 4. Long-form quality
+- 5. Overacting warnings
+- 6. Rewrite heuristics
+- 7. Banned patterns
 
 ## 1. Non-negotiables
 
@@ -50,7 +51,19 @@ Before returning the text, actively remove these high-frequency AI traces:
 
 Prefer plain direct sentences over stylish scaffolding.
 
-## 4. Overacting Warnings
+## 4. Long-Form Quality
+
+For full articles, also ask:
+
+1. Does the opening begin from a concrete scene, fact, or live question instead of an abstract sermon?
+2. Does the middle keep a visible mainline, or does it wander and rely on the reader to reconnect the logic?
+3. If the article uses multiple cases or tools, do they appear in a deliberate order instead of as a dump?
+4. Does the piece show at least one visible person, situation, or decision instead of floating in abstractions?
+5. Before a strong judgment, does it acknowledge why someone else might reasonably see it differently?
+6. If this is a methods piece, does it give the reader something concrete to try and mention the actual learning cost?
+7. Does the ending land on a return, a decision, or a real open question instead of a generic inspirational close?
+
+## 5. Overacting Warnings
 
 Revise if any of these happens:
 
@@ -60,10 +73,11 @@ Revise if any of these happens:
 - self-mockery keeps interrupting real thought
 - identity details appear so often that they feel like branding copy
 - the text tries too hard to “sound alive” and loses clarity
+- too many headings or bullets break the speaking flow of the article
 
 Use fewer devices when the topic is already strong.
 
-## 5. Rewrite Heuristics
+## 6. Rewrite Heuristics
 
 When the draft feels too academic:
 
@@ -71,6 +85,7 @@ When the draft feels too academic:
 - replace abstract authority with observed or lived reasoning
 - convert explanation into question -> pause -> answer where appropriate
 - remove “综上所述 / 由此可见 / 值得注意的是” type phrases
+- replace thesis-first openings with a concrete scene or fact
 
 When the draft feels too AI-templated:
 
@@ -80,6 +95,7 @@ When the draft feels too AI-templated:
 - cut “不是……而是…… / 这不仅仅是……” style framing unless absolutely necessary
 - break tidy triples into normal prose when they sound manufactured
 - swap vague prestige language for a named source, direct claim, or concrete case
+- turn dumped comparisons into one-by-one reveals when sequence matters
 
 When the draft feels too performative:
 
@@ -93,8 +109,10 @@ When the draft feels too flat:
 - add a reversal, a protest question, or a visible case
 - tighten paragraph jobs
 - vary speed between burst, cruise, and expansion
+- add a tether line when the article drifts too far from its own point
+- let the ending return to the opening image or question if the draft has earned that move
 
-## 6. Banned Patterns
+## 7. Banned Patterns
 
 Do not leave these in the final text:
 
@@ -104,6 +122,7 @@ Do not leave these in the final text:
 - 否定式模板：不是……而是……、不仅……而且……、这不仅仅是……
 - 拔高意义：标志着、体现了其重要性、反映了更广泛的趋势
 - 模糊归因：专家认为、有人指出、观察者普遍认为
+- 报告式切割：过多小标题、连续 bullet 罗列、像汇报提纲一样推进
 - 居高临下：你应该、你必须、你需要明白
 - 假客观：研究表明、数据显示 without real source
 - 通用鸡汤结尾：未来可期、这是重要一步、激动人心的时代已经到来

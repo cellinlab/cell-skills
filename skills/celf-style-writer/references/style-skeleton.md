@@ -96,6 +96,17 @@ Use this when:
 
 ## 3. Hook System
 
+### 3.0 Start With Something Concrete
+
+For full articles, prefer an opening built from:
+
+- a scene
+- a live question
+- a visible fact
+- a slightly strange moment
+
+Avoid opening from a slogan or a high-altitude abstract claim unless the piece is intentionally essayistic.
+
 ### 3.1 Empty Pull Sentences
 
 Insert short pull sentences after every 2-3 dense information lines when needed.
@@ -216,6 +227,16 @@ Use one of these moves:
 
 When listing many facts, break them up with non-fact lines so the reader does not go numb.
 
+### 4.5 Respect the Opposite Position
+
+Before pushing a judgment, show that the other side or the hesitant reader has a real reason for seeing it differently.
+
+Do this by:
+
+- naming the pressure they live under
+- describing the reasonable part of their position
+- then giving the writer’s own choice or judgment
+
 ## 5. Emphasis System
 
 ### 5.1 Use Nail Sentences Carefully
@@ -274,6 +295,20 @@ Common transition jobs:
 - ask a hinge question
 - shift tone with a weak hook
 - self-mock before tightening
+
+### 6.4 Keep the Mainline Visible
+
+When the article moves into a case, history, theory, or side road, return with one short tether line.
+
+The reader should not need to rebuild the argument from scratch after each detour.
+
+### 6.5 Prefer Spoken Flow Over Report Layout
+
+For personal long-form writing:
+
+- avoid over-sectioning the article
+- avoid list-heavy presentation unless the piece is genuinely procedural
+- let transitions and paragraph weight do most of the structural work
 
 ## 7. Banned Language
 

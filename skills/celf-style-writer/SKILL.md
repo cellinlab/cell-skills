@@ -7,15 +7,16 @@ description: "Personal Chinese writing-style skill for Cell 细胞 style article
 
 ## Overview
 
-Write or reshape Chinese content so it feels like Cell talking to the reader in person: warm, experienced, concrete, honest, lightly sharp, and structurally alive. Treat this as a style skill, not a topic skill. The output should feel human, specific, and lived, not like an AI trying to imitate personality through formulas.
+Write or reshape Chinese content so it feels like Cell talking to the reader in person: warm, experienced, concrete, honest, lightly sharp, and structurally alive. Treat this as a style skill, not a topic skill. The output should feel human, specific, and lived, not like an AI trying to imitate personality through formulas. For long-form pieces, make the article advance like a real person thinking on the page, not like a report being assembled.
 
 ## Quick Start
 
 1. Pick the mode: `write`, `rewrite`, `enhance`, or `review`.
 2. Build a quick brief with `assets/style-brief-template.md`.
 3. Read [references/style-skeleton.md](references/style-skeleton.md) before drafting or heavy rewriting.
-4. Read [references/personal-variables.md](references/personal-variables.md) when the draft needs Cell-specific identity, values, catchphrases, or tone choices.
-5. Run the final text against [references/quality-bar.md](references/quality-bar.md) before delivery.
+4. Read [references/content-method.md](references/content-method.md) when writing from scratch, rewriting a long article, or deciding how the piece should advance.
+5. Read [references/personal-variables.md](references/personal-variables.md) when the draft needs Cell-specific identity, values, catchphrases, or tone choices.
+6. Run the final text against [references/quality-bar.md](references/quality-bar.md) before delivery.
 
 If the user only wants style diagnosis, do not rewrite the full piece. Diagnose first.
 
@@ -61,6 +62,7 @@ Determine:
 - who the reader is
 - what the piece is trying to do
 - whether the source already has a usable structure
+- which long-form archetype fits best if this is a full article
 
 ### Step 2: Set the Style Brief
 
@@ -71,23 +73,35 @@ Lock at least:
 - scenario
 - purpose
 - tone temperature
+- article archetype if relevant
 - allowed degree of personal exposure
 - whether concept naming and stronger hooks should be used
 
 Use `assets/style-brief-template.md`.
 
-### Step 3: Apply the Style
+### Step 3: Set the Material Boundary
+
+Determine what must come from the human side and what AI may help supply.
+
+- keep firsthand observation, emotional memory, and decisive judgment grounded in real source material
+- use AI for structure, counterpoints, background, and analogy support
+- admit uncertainty when the source lacks real detail instead of inventing texture
+
+Use [references/content-method.md](references/content-method.md) when needed.
+
+### Step 4: Apply the Style
 
 Apply the style in this order:
 
 1. preserve or rebuild the conversational stance
 2. remove filler, fake grandeur, vague attribution, and obvious AI scaffolding
-3. fix the logic and rhythm at paragraph level
-4. add signature devices only where they genuinely help
-5. inject Cell-specific tone, catchphrases, and transitions
-6. make one last pass for AI smell, especially formulaic contrasts, generic endings, and checklist-like structure
+3. give the article a concrete opening, a visible mainline, and a believable end point
+4. fix the logic and rhythm at paragraph level
+5. add signature devices only where they genuinely help
+6. inject Cell-specific tone, catchphrases, and transitions
+7. make one last pass for AI smell, especially formulaic contrasts, generic endings, checklist-like structure, and over-tidy symmetry
 
-### Step 4: Self-Check
+### Step 5: Self-Check
 
 Check:
 
@@ -95,6 +109,7 @@ Check:
 - does it sound like Cell, not just “generic casual Chinese”
 - is the argument still clear after styling
 - did any device become performative or repetitive
+- if this is a long-form piece, does it advance scene by scene or thought by thought instead of block by block
 
 Use `assets/style-review-checklist.md`.
 
@@ -123,6 +138,8 @@ Always:
 
 - [references/style-skeleton.md](references/style-skeleton.md)
   - Read for the reusable style skeleton extracted from the original prompt: persona, sentence patterns, hook system, argument system, rhythm, transitions, and bans.
+- [references/content-method.md](references/content-method.md)
+  - Read for long-form article method: angle quality checks, human/AI boundary, article archetypes, progression devices, scene-led openings, callback endings, and mainline control.
 - [references/personal-variables.md](references/personal-variables.md)
   - Read for Cell’s confirmed identity pack, value system, tone defaults, catchphrases, emotional markers, concept naming defaults, and transition phrases.
 - [references/quality-bar.md](references/quality-bar.md)
