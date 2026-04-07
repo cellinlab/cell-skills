@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cell 风格写作"
+  short_description: "按 Cell 细胞的方法写更有活人感与朋友聊天感的中文内容"
+  default_prompt: "Use $celf-style-writer to write, rewrite, or review this Chinese piece in Cell style: keep the friend-to-friend tone, living voice, concrete experiential reasoning, and low-AI-smell phrasing. Avoid formulaic binaries like 不是……而是…… unless truly necessary."
