@@ -1,6 +1,7 @@
 ---
 name: opc-case-research
 description: Systematic public-information research for OPC, super-individual, creator IP, and one-person business cases, with Chinese outputs focused on content strategy, IP positioning, channel strategy, business models, timelines, and replicable lessons. Use when Codex needs to research a named person, creator brand, or one-person company case; produce a case brief or structured report; map sources and evidence; compare facts versus inferences; or turn scattered public materials into a reusable research deliverable.
+metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree/main/skills/opc-case-research"}}
 ---
 
 # OPC Case Research
@@ -222,12 +223,18 @@ When information is weak, say so clearly and narrow the claim.
   - Read for field definitions for evidence, timeline, content samples, and business model tables.
 - [references/report-template.md](references/report-template.md)
   - Read when drafting a standard long-form report.
-- `assets/case-brief-template.md`
+- [assets/case-brief-template.md](assets/case-brief-template.md)
   - Use when creating a short case brief.
-- `assets/research-report-template.md`
+- [assets/research-report-template.md](assets/research-report-template.md)
   - Use when creating a full report draft.
-- `assets/*.csv`
-  - Use when creating structured tables for evidence, timeline, content samples, and business model analysis.
+- [assets/evidence-table.csv](assets/evidence-table.csv)
+  - Use when creating the evidence table.
+- [assets/timeline-table.csv](assets/timeline-table.csv)
+  - Use when creating the timeline table.
+- [assets/content-sample-table.csv](assets/content-sample-table.csv)
+  - Use when creating the content sampling table.
+- [assets/business-model-table.csv](assets/business-model-table.csv)
+  - Use when creating the business model table.
 
 ## Not for This Skill
 

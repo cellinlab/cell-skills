@@ -60,3 +60,109 @@
 - 使用方式
 - 示例内容
 - 持续更新的版本迭代
+
+## OpenClaw 安装
+
+这个仓库当前已经可以被 OpenClaw 识别，但更推荐按下面两种方式安装：
+
+### 方式一：把仓库作为共享 Skills 源
+
+OpenClaw 支持把一个额外目录加入 `skills.load.extraDirs`。这个仓库可以直接指向仓库根目录，也可以直接指向里面的 `skills/` 目录。
+
+示例：
+
+```json
+{
+  "skills": {
+    "load": {
+      "extraDirs": [
+        "/absolute/path/to/skills"
+      ]
+    }
+  }
+}
+```
+
+或：
+
+```json
+{
+  "skills": {
+    "load": {
+      "extraDirs": [
+        "/absolute/path/to/skills/skills"
+      ]
+    }
+  }
+}
+```
+
+更新配置后，新开一个 OpenClaw 会话，或重启 gateway，再用下面的命令确认是否加载成功：
+
+```bash
+openclaw skills list
+```
+
+### 方式二：只安装单个 Skill
+
+如果你只想用某一个 Skill，直接把对应目录复制到你的 workspace `skills/` 下即可，例如：
+
+```bash
+cp -R ./skills/deep-writer /path/to/your-workspace/skills/
+```
+
+这种方式最直接，也最适合只挑一两个 Skill 使用的场景。
+
+## ClawHub 支持
+
+这个仓库现在已经按“一 Skill 一个目录”的方式组织，单个 Skill 目录可以直接作为 ClawHub 的发布单元。
+
+目前更推荐两种使用方式：
+
+### 1. 从 GitHub 导入单个 Skill
+
+可以直接把某个 Skill 的 GitHub 路径丢给 ClawHub 的 GitHub Import，例如：
+
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/deep-writer`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/opc-case-research`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/celf-style-writer`
+
+如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
+
+### 2. 用 `clawhub` CLI 发布单个 Skill
+
+示例：
+
+```bash
+clawhub publish ./skills/deep-writer \
+  --slug cell-deep-writer \
+  --name "Deep Writer" \
+  --version 0.1.0 \
+  --tags latest \
+  --changelog "Initial public release"
+```
+
+发布 `opc-case-research` 或 `celf-style-writer` 时，把路径、slug、name、version 改成对应值即可。
+
+如果你想直接在这个仓库里发单个 Skill，也可以用内置脚本：
+
+```bash
+./scripts/publish-skill.sh deep-writer --version 0.1.0 --changelog "Initial public release"
+```
+
+这个脚本会自动：
+
+- 定位 `skills/<slug>` 目录
+- 默认用 `cell-<目录名>` 作为 ClawHub slug，降低重名概率
+- 优先读取 `agents/openai.yaml` 里的 `display_name` 作为展示名
+- 调用 `clawhub publish`
+
+## 当前兼容性结论
+
+从仓库结构上看，它对 OpenClaw 已经算“可安装”，但之前对 ClawHub 还不够友好，主要问题有：
+
+- README 里没有安装入口，第一次使用的人不知道该指向仓库根目录还是 `skills/`
+- 没有写清楚单 Skill 发布与导入的推荐路径
+- `SKILL.md` 里有些模板 / 资产文件只是代码字面量，没有用相对链接指向，导致 ClawHub 的 GitHub Import 默认选择文件时，可能漏掉这些依赖文件
+
+这次已经把这些点补齐，仓库现在更适合作为 OpenClaw 共享 Skills 源，也更容易拆成单个 Skill 上 ClawHub。

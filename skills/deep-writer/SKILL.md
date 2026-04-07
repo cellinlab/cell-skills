@@ -1,6 +1,7 @@
 ---
 name: deep-writer
 description: Adaptive deep-writing workflow for all forms of deep content creation in Chinese, including turning transcripts and note piles into articles, deepening rough drafts, or writing structured long-form content from a topic, thesis, question, or outline. Use when Codex needs to clarify audience and purpose, build a brief, extract or construct a sound argument structure, merge repeated ideas, design an outline before drafting, deepen analysis, preserve source logic when needed, or deliver writing through staged checkpoints instead of a one-shot article.
+metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree/main/skills/deep-writer"}}
 ---
 
 # Deep Writer
@@ -166,9 +167,9 @@ Always:
   - Read for mode selection, the full stage checklist, clustering heuristics, topic-driven argument design, one-shot mode, and failure recovery.
 - [references/quality-bar.md](references/quality-bar.md)
   - Read for the final review checklist, spoken-language cleanup rules, topic-writing quality rules, and over-expansion guardrails.
-- `assets/brief-template.md`
+- [assets/brief-template.md](assets/brief-template.md)
   - Use when drafting the stage-one brief.
-- `assets/outline-template.md`
+- [assets/outline-template.md](assets/outline-template.md)
   - Use when presenting or locking a reusable structure blueprint.
-- `assets/stage-output-template.md`
+- [assets/stage-output-template.md](assets/stage-output-template.md)
   - Use when formatting staged outputs and todo-state updates.

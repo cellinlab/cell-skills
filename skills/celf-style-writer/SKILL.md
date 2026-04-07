@@ -1,6 +1,7 @@
 ---
 name: celf-style-writer
 description: "Personal Chinese writing-style skill for Cell 细胞 style articles, rewrites, style enhancement, and style review. Use when Codex needs to write, rewrite, enhance, or audit Chinese content so it sounds like Cell speaking directly to the reader: friend-to-friend, warm but sharp, concrete, hook-driven, anti-academic, anti-AI-template, and grounded in real experience instead of abstract sermonizing."
+metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree/main/skills/celf-style-writer"}}
 ---
 
 # Celf Style Writer
@@ -144,9 +145,9 @@ Always:
   - Read for Cell’s confirmed identity pack, value system, tone defaults, catchphrases, emotional markers, concept naming defaults, and transition phrases.
 - [references/quality-bar.md](references/quality-bar.md)
   - Read for the final review checklist, anti-AI / anti-academic rules, device-overuse warnings, and rewrite heuristics.
-- `assets/style-brief-template.md`
+- [assets/style-brief-template.md](assets/style-brief-template.md)
   - Use to define mode, audience, scenario, tone, and allowed devices before writing.
-- `assets/personal-parameter-sheet.md`
+- [assets/personal-parameter-sheet.md](assets/personal-parameter-sheet.md)
   - Use as the compact editable version of Cell’s personal style variables.
-- `assets/style-review-checklist.md`
+- [assets/style-review-checklist.md](assets/style-review-checklist.md)
   - Use for a fast pass before returning the final text.

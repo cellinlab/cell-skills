@@ -30,7 +30,7 @@
 
 ## 3. 与现有 Skill 的关系
 
-它和仓库里现有的 [deep-writer](/Users/cell/code/skills/skills/deep-writer/SKILL.md) 不是替代关系，而是分工关系。
+它和仓库里现有的 [deep-writer](/Users/cell/code/cell-skills/skills/deep-writer/SKILL.md) 不是替代关系，而是分工关系。
 
 分工如下：
 
