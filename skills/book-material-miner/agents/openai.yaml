@@ -1,0 +1,4 @@
+interface:
+  display_name: "拆书素材提炼"
+  short_description: "把书籍内容提炼成观点、故事、金句、素材块与可继续深写的素材文章"
+  default_prompt: "Use $book-material-miner to break down this book, excerpt, reading note, or book link into reusable Chinese writing materials instead of a normal summary: extract viewpoint blocks, story blocks, golden-line rewrites, and a source article that can be handed off to $deep-writer for deeper long-form writing."

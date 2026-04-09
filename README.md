@@ -21,6 +21,8 @@
   - 面向超级个体、创作者 IP、一人公司案例的系统化公开信息调研，重点关注内容策略、IP 定位、渠道与商业模式
 - `skills/deep-writer`
   - 面向通用深度内容写作，支持主题驱动写作、草稿深化、以及访谈 / 播客 / 笔记等素材整理型写作
+- `skills/book-material-miner`
+  - 面向拆书与写作素材提炼，把书籍内容压缩成观点、故事、金句、素材块，以及可交给 `deep-writer` 继续深写的素材文章
 
 ## 这些 Skills 会覆盖什么
 
@@ -126,6 +128,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/deep-writer`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/opc-case-research`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/celf-style-writer`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/book-material-miner`
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
 
