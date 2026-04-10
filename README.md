@@ -148,6 +148,13 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
 
+### 1.1 已发布到 ClawHub 的新 Skill
+
+- [内容策略诊断](https://clawhub.ai/cellinlab/cell-content-strategy-diagnosis)
+- [开头优化](https://clawhub.ai/cellinlab/cell-hook-optimizer)
+- [AI 写作诊断](https://clawhub.ai/cellinlab/cell-ai-writing-diagnosis)
+- [对标筛选](https://clawhub.ai/cellinlab/cell-benchmark-filter)
+
 ### 2. 用 `clawhub` CLI 发布单个 Skill
 
 示例：
