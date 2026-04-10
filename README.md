@@ -33,6 +33,8 @@
   - 面向 AI 写作痕迹诊断，逐段指出文本里过度光滑、模板化或作者感不足的位置
 - `skills/benchmark-filter`
   - 面向创作者 / OPC / 一人公司语境下的对标筛选，判断谁值得研究、值得学哪一层
+- `skills/xhs-title-selector`
+  - 面向小红书标题策略与公式匹配，先判断该打哪种触发器，再生成可追溯的标题方案
 - `skills/learning-builder`
   - 面向“学习-消化-输出”一体化的学习路径构建，把模糊学习目标转成可执行学习包（学习者画像、权威来源、阶段练习、里程碑与复盘）
 
@@ -43,6 +45,7 @@
 - 对标筛选与案例研究
 - 大纲设计与结构梳理
 - 标题、摘要、开头、结尾等文案生成与优化
+- 小红书标题策略与公式匹配
 - 长文、短内容、脚本、口播稿等创作辅助
 - 改写、润色、翻译、风格统一与 AI 痕迹诊断
 - 发布前检查与内容优化
@@ -147,6 +150,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/hook-optimizer`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/ai-writing-diagnosis`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/benchmark-filter`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/xhs-title-selector`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/learning-builder`
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。

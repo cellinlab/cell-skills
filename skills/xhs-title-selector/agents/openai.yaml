@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书标题策略"
+  short_description: "把小红书标题做成可追溯的公式匹配，而不是随手起几个标题"
+  default_prompt: "Use $xhs-title-selector to create Chinese Xiaohongshu titles by matching the topic to the right trigger families and formula IDs, not by free-generating blindly. Give me multiple strategic directions, explain why each formula fits, and recommend the best titles to test first."
