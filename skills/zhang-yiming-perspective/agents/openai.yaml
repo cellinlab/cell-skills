@@ -1,0 +1,4 @@
+interface:
+  display_name: "张一鸣视角"
+  short_description: "用张一鸣的产品、组织、信息流和长期修炼镜片看问题，而不是套用字节成功学"
+  default_prompt: "Use $zhang-yiming-perspective in advisor-first mode. Identify whether this is a product, organization, algorithm, information-flow, or long-term-discipline question, answer with 2-3 of Zhang Yiming's strongest lenses, and make the required preconditions explicit."

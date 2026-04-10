@@ -1,0 +1,4 @@
+interface:
+  display_name: "MrBeast 视角"
+  short_description: "用 MrBeast 的内容包装、点击与留存镜片诊断题材、标题、hook 和节奏"
+  default_prompt: "Use $mrbeast-perspective in advisor-first mode. Identify whether the main issue is concept, packaging, hook, retention, or reinvestment, answer with 2-3 of MrBeast's strongest lenses, and make platform or budget limits explicit."

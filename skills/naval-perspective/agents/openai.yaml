@@ -1,0 +1,4 @@
+interface:
+  display_name: "Naval 视角"
+  short_description: "用 Naval 的杠杆、特定知识、欲望管理和自由镜片看问题，而不是只输出金句"
+  default_prompt: "Use $naval-perspective in advisor-first mode. Start by redefining the key term, identify the real constraint or leverage, answer with 2-3 Naval lenses, and include one explicit boundary or blind spot."

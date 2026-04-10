@@ -39,6 +39,18 @@
   - 面向“学习-消化-输出”一体化的学习路径构建，把模糊学习目标转成可执行学习包（学习者画像、权威来源、阶段练习、里程碑与复盘）
 - `skills/perspective-distiller`
   - 面向公开人物 / 主题的视角蒸馏，把材料沉淀成可复用的认知视角 Skill，而不是只模仿语气
+- `skills/x-content-mentor`
+  - 面向 X/Twitter 的内容策略与账号诊断，把选题、写作、审阅、增长与账号复盘串成一个路由式工作流
+- `skills/paul-graham-perspective`
+  - 面向创业、写作、产品与独立思考的 Paul Graham 顾问型视角 Skill
+- `skills/naval-perspective`
+  - 面向杠杆、特定知识、财富与自由判断的 Naval 顾问型视角 Skill
+- `skills/mrbeast-perspective`
+  - 面向内容包装、标题封面、hook、留存与再投资逻辑的 MrBeast 顾问型视角 Skill
+- `skills/steve-jobs-perspective`
+  - 面向产品取舍、设计体验、整体控制与高标准决策的乔布斯顾问型视角 Skill
+- `skills/zhang-yiming-perspective`
+  - 面向产品、组织、信息流、算法与长期修炼的张一鸣顾问型视角 Skill
 
 ## 这些 Skills 会覆盖什么
 
@@ -47,8 +59,10 @@
 - 对标筛选与案例研究
 - 大纲设计与结构梳理
 - 标题、摘要、开头、结尾等文案生成与优化
+- X/Twitter 选题、写作、审阅、增长与账号诊断
 - 小红书标题策略与公式匹配
 - 人物 / 主题视角蒸馏与认知框架提炼
+- 创业、产品、内容、组织等具体人物视角问答
 - 长文、短内容、脚本、口播稿等创作辅助
 - 改写、润色、翻译、风格统一与 AI 痕迹诊断
 - 发布前检查与内容优化
@@ -156,6 +170,12 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/xhs-title-selector`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/learning-builder`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/perspective-distiller`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/x-content-mentor`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/paul-graham-perspective`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/naval-perspective`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/mrbeast-perspective`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/steve-jobs-perspective`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/zhang-yiming-perspective`
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
 
