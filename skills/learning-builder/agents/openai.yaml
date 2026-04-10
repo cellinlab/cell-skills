@@ -1,0 +1,4 @@
+interface:
+  display_name: "学习路径构建"
+  short_description: "把模糊学习目标变成可执行、可复盘、可输出的学习包"
+  default_prompt: "Use $learning-builder to clarify learner profile, run authority-first research, and produce a personalized Chinese learning pack with stage tasks, exercises, milestones, and citations."

@@ -33,6 +33,8 @@
   - 面向 AI 写作痕迹诊断，逐段指出文本里过度光滑、模板化或作者感不足的位置
 - `skills/benchmark-filter`
   - 面向创作者 / OPC / 一人公司语境下的对标筛选，判断谁值得研究、值得学哪一层
+- `skills/learning-builder`
+  - 面向“学习-消化-输出”一体化的学习路径构建，把模糊学习目标转成可执行学习包（学习者画像、权威来源、阶段练习、里程碑与复盘）
 
 ## 这些 Skills 会覆盖什么
 
@@ -145,6 +147,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/hook-optimizer`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/ai-writing-diagnosis`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/benchmark-filter`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/learning-builder`
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
 
@@ -154,6 +157,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - [开头优化](https://clawhub.ai/cellinlab/cell-hook-optimizer)
 - [AI 写作诊断](https://clawhub.ai/cellinlab/cell-ai-writing-diagnosis)
 - [对标筛选](https://clawhub.ai/cellinlab/cell-benchmark-filter)
+- [学习路径构建](https://clawhub.ai/cellinlab/cell-learning-builder)
 
 ### 2. 用 `clawhub` CLI 发布单个 Skill
 
