@@ -187,6 +187,11 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - [对标筛选](https://clawhub.ai/cellinlab/cell-benchmark-filter)
 - [小红书标题策略](https://clawhub.ai/cellinlab/cell-xhs-title-selector)
 - [学习路径构建](https://clawhub.ai/cellinlab/cell-learning-builder)
+- [X 内容策略](https://clawhub.ai/cellinlab/cell-x-content-mentor)
+- [Paul Graham 视角](https://clawhub.ai/cellinlab/cell-paul-graham-perspective)
+- [Naval 视角](https://clawhub.ai/cellinlab/cell-naval-perspective)
+- [MrBeast 视角](https://clawhub.ai/cellinlab/cell-mrbeast-perspective)
+- [乔布斯视角](https://clawhub.ai/cellinlab/cell-steve-jobs-perspective)
 
 ### 2. 用 `clawhub` CLI 发布单个 Skill
 
