@@ -1,0 +1,4 @@
+interface:
+  display_name: "内容策略诊断"
+  short_description: "判断一个内容题该怎么做才成立，而不是直接帮你开写"
+  default_prompt: "Use $content-strategy-diagnosis to evaluate this Chinese topic, draft, or content plan before writing: identify the main bottleneck, recommend the best-fit format and platform, check material density and goal linkage, and end with one concrete next move."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "开头优化"
+  short_description: "诊断前几秒或前几句为什么不够抓人，并生成多组可兑现的开头方案"
+  default_prompt: "Use $hook-optimizer to diagnose this Chinese opening or short-form draft: determine whether the hook problem is really an opening problem or a weak-material problem, then generate multiple opening directions that the body can actually pay off."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "对标筛选"
+  short_description: "判断一个创作者或一人公司案例是否值得学，以及到底该学哪一层"
+  default_prompt: "Use $benchmark-filter to evaluate this creator, OPC, or one-person business benchmark in Chinese: separate business signal from vanity signal, tell me what layer is actually worth copying, and decide whether it should be escalated into $opc-case-research."

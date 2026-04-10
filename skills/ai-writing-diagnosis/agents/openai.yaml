@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 写作诊断"
+  short_description: "逐段指出文本里真正像 AI 的地方，而不是一上来全篇重写"
+  default_prompt: "Use $ai-writing-diagnosis to inspect this Chinese draft for AI-writing fingerprints: quote the suspicious passages in reading order, explain exactly what feels too smooth, formulaic, generic, or authorless, and tell me what to fix first without rewriting the whole piece."

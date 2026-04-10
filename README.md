@@ -23,14 +23,26 @@
   - 面向通用深度内容写作，支持主题驱动写作、草稿深化、以及访谈 / 播客 / 笔记等素材整理型写作
 - `skills/book-material-miner`
   - 面向拆书与写作素材提炼，把书籍内容压缩成观点、故事、金句、素材块，以及可交给 `deep-writer` 继续深写的素材文章
+- `skills/celf-style-writer`
+  - 面向 Cell 细胞个人风格写作，适合文章写作、改写、增强与风格审查
+- `skills/content-strategy-diagnosis`
+  - 面向内容开写前的策略诊断，判断选题、形式、平台、材料密度与目标连接是否成立
+- `skills/hook-optimizer`
+  - 面向短内容开头优化，先诊断前几秒 / 前几句的问题，再给出多组可兑现的开头方案
+- `skills/ai-writing-diagnosis`
+  - 面向 AI 写作痕迹诊断，逐段指出文本里过度光滑、模板化或作者感不足的位置
+- `skills/benchmark-filter`
+  - 面向创作者 / OPC / 一人公司语境下的对标筛选，判断谁值得研究、值得学哪一层
 
 ## 这些 Skills 会覆盖什么
 
+- 内容前置诊断与策略判断
 - 内容选题与研究
+- 对标筛选与案例研究
 - 大纲设计与结构梳理
-- 标题、摘要、开头、结尾等文案生成
+- 标题、摘要、开头、结尾等文案生成与优化
 - 长文、短内容、脚本、口播稿等创作辅助
-- 改写、润色、翻译与风格统一
+- 改写、润色、翻译、风格统一与 AI 痕迹诊断
 - 发布前检查与内容优化
 
 ## 这个仓库的定位
@@ -129,6 +141,10 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/opc-case-research`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/celf-style-writer`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/book-material-miner`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/content-strategy-diagnosis`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/hook-optimizer`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/ai-writing-diagnosis`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/benchmark-filter`
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
 
