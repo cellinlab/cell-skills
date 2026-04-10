@@ -1,0 +1,4 @@
+interface:
+  display_name: "X 内容策略"
+  short_description: "把 X/Twitter 的选题、写作、审阅、增长和账号诊断串成一个路由式工作流"
+  default_prompt: "Use $x-content-mentor to handle this X/Twitter task by first routing it to the right scene: topic strategy, writing, review, growth, or account diagnosis. Keep the advice grounded, prioritize the biggest bottleneck, and produce a concrete next step instead of free-generating tweets blindly."
