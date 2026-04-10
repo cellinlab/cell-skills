@@ -161,6 +161,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - [开头优化](https://clawhub.ai/cellinlab/cell-hook-optimizer)
 - [AI 写作诊断](https://clawhub.ai/cellinlab/cell-ai-writing-diagnosis)
 - [对标筛选](https://clawhub.ai/cellinlab/cell-benchmark-filter)
+- [小红书标题策略](https://clawhub.ai/cellinlab/cell-xhs-title-selector)
 - [学习路径构建](https://clawhub.ai/cellinlab/cell-learning-builder)
 
 ### 2. 用 `clawhub` CLI 发布单个 Skill
