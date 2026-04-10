@@ -1,0 +1,4 @@
+interface:
+  display_name: "视角蒸馏"
+  short_description: "把一个公开人物或主题蒸成可复用的认知视角 Skill，而不是只模仿口气"
+  default_prompt: "Use $perspective-distiller to build or update a Chinese perspective skill for this public figure or theme: research with primary sources first, extract validated mental models and decision heuristics, preserve tensions and honest boundaries, and generate a self-contained skill package rather than a simple character imitation."

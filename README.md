@@ -37,6 +37,8 @@
   - 面向小红书标题策略与公式匹配，先判断该打哪种触发器，再生成可追溯的标题方案
 - `skills/learning-builder`
   - 面向“学习-消化-输出”一体化的学习路径构建，把模糊学习目标转成可执行学习包（学习者画像、权威来源、阶段练习、里程碑与复盘）
+- `skills/perspective-distiller`
+  - 面向公开人物 / 主题的视角蒸馏，把材料沉淀成可复用的认知视角 Skill，而不是只模仿语气
 
 ## 这些 Skills 会覆盖什么
 
@@ -46,6 +48,7 @@
 - 大纲设计与结构梳理
 - 标题、摘要、开头、结尾等文案生成与优化
 - 小红书标题策略与公式匹配
+- 人物 / 主题视角蒸馏与认知框架提炼
 - 长文、短内容、脚本、口播稿等创作辅助
 - 改写、润色、翻译、风格统一与 AI 痕迹诊断
 - 发布前检查与内容优化
@@ -152,6 +155,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/benchmark-filter`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/xhs-title-selector`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/learning-builder`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/perspective-distiller`
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
 
