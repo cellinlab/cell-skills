@@ -1,0 +1,4 @@
+interface:
+  display_name: "口播脚本打磨"
+  short_description: "把写得通顺的脚本改成更适合说、录和听的口播稿"
+  default_prompt: "Use $spoken-script-polish to turn this draft into a smoother spoken script. First check whether the problem is content clarity or spoken delivery, then rewrite for breath units, natural oral rhythm, and optional pause or emphasis marks."

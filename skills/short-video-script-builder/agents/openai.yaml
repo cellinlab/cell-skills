@@ -1,0 +1,4 @@
+interface:
+  display_name: "短视频脚本工坊"
+  short_description: "从对标视频拆解、公式提炼到脚本与分镜生成的中文短视频工作流"
+  default_prompt: "Use $short-video-script-builder to create a Chinese short-video script pack. First decide whether this should be benchmark-first or formula-first, analyze the first 3 seconds as copy hook plus visual hook, then generate the script, storyboard, pacing, CTA, and compliance notes."

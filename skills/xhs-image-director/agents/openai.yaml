@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书配图导演"
+  short_description: "先提案再出图，为小红书笔记设计更原生、更有停留感的配图方向"
+  default_prompt: "Use $xhs-image-director to create Xiaohongshu image directions. First understand the content, then propose 2-3 distinct visual routes, choose between AI generation and HTML fallback, and review the result for both design quality and feed attractiveness."

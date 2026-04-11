@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频封标诊断"
+  short_description: "系统检查短视频的标题、封面、开头承接和兑现关系"
+  default_prompt: "Use $video-packaging-diagnosis to diagnose this short video's title, cover, opening, and payoff structure. Identify the single biggest bottleneck first, then provide at least two concrete alternative directions."

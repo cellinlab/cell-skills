@@ -51,6 +51,16 @@
   - 面向产品取舍、设计体验、整体控制与高标准决策的乔布斯顾问型视角 Skill
 - `skills/zhang-yiming-perspective`
   - 面向产品、组织、信息流、算法与长期修炼的张一鸣顾问型视角 Skill
+- `skills/short-video-script-builder`
+  - 面向中文短视频脚本创作的工坊型 Skill，支持对标拆解、前 3 秒钩子分析、公式提炼、脚本与分镜生成
+- `skills/video-packaging-diagnosis`
+  - 面向短视频标题、封面、开头承接与兑现关系的诊断 Skill
+- `skills/spoken-script-polish`
+  - 面向口播、教程、talking-head 等文稿的口语化与节奏打磨 Skill
+- `skills/speech-structure-coach`
+  - 面向线下分享、技术演讲、教程视频与 PPT 审查的演讲结构教练 Skill
+- `skills/xhs-image-director`
+  - 面向小红书封面、轮播图与信息图的配图导演 Skill，强调先提案、后生成、再审查
 
 ## 这些 Skills 会覆盖什么
 
@@ -61,8 +71,10 @@
 - 标题、摘要、开头、结尾等文案生成与优化
 - X/Twitter 选题、写作、审阅、增长与账号诊断
 - 小红书标题策略与公式匹配
+- 小红书封面、轮播图与信息图方向设计
 - 人物 / 主题视角蒸馏与认知框架提炼
 - 创业、产品、内容、组织等具体人物视角问答
+- 短视频脚本、封标诊断、口播打磨与演讲结构优化
 - 长文、短内容、脚本、口播稿等创作辅助
 - 改写、润色、翻译、风格统一与 AI 痕迹诊断
 - 发布前检查与内容优化
@@ -176,6 +188,11 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/mrbeast-perspective`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/steve-jobs-perspective`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/zhang-yiming-perspective`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/short-video-script-builder`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/video-packaging-diagnosis`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/spoken-script-polish`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/speech-structure-coach`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/xhs-image-director`
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
 
@@ -192,6 +209,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - [Naval 视角](https://clawhub.ai/cellinlab/cell-naval-perspective)
 - [MrBeast 视角](https://clawhub.ai/cellinlab/cell-mrbeast-perspective)
 - [乔布斯视角](https://clawhub.ai/cellinlab/cell-steve-jobs-perspective)
+- [张一鸣视角](https://clawhub.ai/cellinlab/cell-zhang-yiming-perspective)
 
 ### 2. 用 `clawhub` CLI 发布单个 Skill
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "演讲结构教练"
+  short_description: "基于 Patrick Winston 方法论，审查演讲、教程和幻灯片的开场、结构与结尾"
+  default_prompt: "Use $speech-structure-coach to review this talk, workshop, tutorial video, or slide deck. Focus on the opening promise, attention structure, verbal punctuation, slide sins, and ending strength rather than surface polish."
