@@ -210,6 +210,10 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - [MrBeast 视角](https://clawhub.ai/cellinlab/cell-mrbeast-perspective)
 - [乔布斯视角](https://clawhub.ai/cellinlab/cell-steve-jobs-perspective)
 - [张一鸣视角](https://clawhub.ai/cellinlab/cell-zhang-yiming-perspective)
+- [短视频脚本工坊](https://clawhub.ai/cellinlab/cell-short-video-script-builder)
+- [视频封标诊断](https://clawhub.ai/cellinlab/cell-video-packaging-diagnosis)
+- [口播脚本打磨](https://clawhub.ai/cellinlab/cell-spoken-script-polish)
+- [演讲结构教练](https://clawhub.ai/cellinlab/cell-speech-structure-coach)
 
 ### 2. 用 `clawhub` CLI 发布单个 Skill
 
