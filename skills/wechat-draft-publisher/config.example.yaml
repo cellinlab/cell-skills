@@ -1,0 +1,8 @@
+wechat:
+  appid: "wx_your_appid"
+  secret: "your_app_secret"
+  author: ""
+  cover_media_type: "thumb"
+
+preview:
+  auto_open: true

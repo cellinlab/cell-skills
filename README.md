@@ -13,6 +13,42 @@
 - `specs/`
   - 对应 Skill 的设计文档，用来沉淀目标、边界、输入输出契约和实现思路
 
+## Specs 与 Skills 的边界
+
+这个仓库默认把“设计说明”和“运行说明”分开写：
+
+- `specs/`
+  - 可以写设计来源、上游参考、学习对象、保留 / 改造关系、和其他 Skill 的设计分工
+- `skills/`
+  - 只写运行时真正需要的内容：触发范围、输入假设、工作流、硬约束、故障处理、资源导航
+
+一个重要约束是：
+
+- 上游仓库、学习来源、启发对象、设计对比，只放在 `specs/`
+- `skills/` 里的 `SKILL.md`、`references/`、`assets/` 说明文字，不写这类来源叙述
+
+原因很简单：
+
+- `specs/` 是给设计和维护看的
+- `skills/` 是给运行中的 Agent 看的
+- 如果把“这个 Skill 学自哪里 / 改自哪里”写进运行层，容易把历史来源误当成当前事实，增加幻觉风险
+
+更完整的约定见 [specs/authoring-rules.md](./specs/authoring-rules.md)。
+
+需要做自动检查时，可运行：
+
+```bash
+python3 scripts/check-skill-doc-boundaries.py
+```
+
+如果你使用 `pre-commit`，仓库已经内置了对应配置：
+
+```bash
+pip install pre-commit
+pre-commit install
+pre-commit run --all-files
+```
+
 ## 当前已完成的 Skills
 
 目前已经整理并落地的 Skills 包括：
@@ -61,6 +97,8 @@
   - 面向线下分享、技术演讲、教程视频与 PPT 审查的演讲结构教练 Skill
 - `skills/xhs-image-director`
   - 面向小红书封面、轮播图与信息图的配图导演 Skill，强调先提案、后生成、再审查
+- `skills/wechat-draft-publisher`
+  - 面向微信公众号草稿发布，把现成 Markdown / 文章内容做发布前检查、排版推送、图片上传与故障排查，明确不负责选题和写作
 - `skills/horizontal-vertical-analysis`
   - 面向产品、公司、概念、技术与人物的通用深度研究 Skill，用纵向生命历程、横向竞争切面和交汇洞察来产出结构化研究报告
 
@@ -74,6 +112,7 @@
 - X/Twitter 选题、写作、审阅、增长与账号诊断
 - 小红书标题策略与公式匹配
 - 小红书封面、轮播图与信息图方向设计
+- 微信公众号草稿箱发布、排版检查与发布故障排查
 - 人物 / 主题视角蒸馏与认知框架提炼
 - 创业、产品、内容、组织等具体人物视角问答
 - 短视频脚本、封标诊断、口播打磨与演讲结构优化

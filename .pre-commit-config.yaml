@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: skill-doc-boundaries
+        name: skill-doc-boundaries
+        entry: python3 scripts/check-skill-doc-boundaries.py
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
