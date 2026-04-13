@@ -61,6 +61,8 @@
   - 面向线下分享、技术演讲、教程视频与 PPT 审查的演讲结构教练 Skill
 - `skills/xhs-image-director`
   - 面向小红书封面、轮播图与信息图的配图导演 Skill，强调先提案、后生成、再审查
+- `skills/horizontal-vertical-analysis`
+  - 面向产品、公司、概念、技术与人物的通用深度研究 Skill，用纵向生命历程、横向竞争切面和交汇洞察来产出结构化研究报告
 
 ## 这些 Skills 会覆盖什么
 
@@ -75,6 +77,7 @@
 - 人物 / 主题视角蒸馏与认知框架提炼
 - 创业、产品、内容、组织等具体人物视角问答
 - 短视频脚本、封标诊断、口播打磨与演讲结构优化
+- 通用横纵研究、竞品分析与正式研究报告生成
 - 长文、短内容、脚本、口播稿等创作辅助
 - 改写、润色、翻译、风格统一与 AI 痕迹诊断
 - 发布前检查与内容优化
@@ -193,6 +196,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/spoken-script-polish`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/speech-structure-coach`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/xhs-image-director`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/horizontal-vertical-analysis`
 
 如果直接导入整个仓库，ClawHub 也能自动识别多个 `SKILL.md` 候选项，再让你选择其中一个。
 
@@ -214,6 +218,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - [视频封标诊断](https://clawhub.ai/cellinlab/cell-video-packaging-diagnosis)
 - [口播脚本打磨](https://clawhub.ai/cellinlab/cell-spoken-script-polish)
 - [演讲结构教练](https://clawhub.ai/cellinlab/cell-speech-structure-coach)
+- [横纵研究工作台](https://clawhub.ai/cellinlab/cell-horizontal-vertical-analysis)
 
 ### 2. 用 `clawhub` CLI 发布单个 Skill
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "横纵研究工作台"
+  short_description: "用纵向生命历程、横向竞争切面和交汇洞察来做通用深度研究"
+  default_prompt: "Use $horizontal-vertical-analysis to research this object with a dual-axis workflow: first build the source map and timeline, then do vertical history, horizontal comparison, and crossing insights. Separate facts, inferences, and unknowns, and deliver a structured Chinese research report."

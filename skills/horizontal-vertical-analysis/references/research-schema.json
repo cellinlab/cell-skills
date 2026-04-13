@@ -1,0 +1,100 @@
+{
+  "$schema": "Horizontal Vertical Analysis Research Schema",
+  "version": "1.0",
+  "description": "用于横纵分析法研究的结构化记录模板。",
+  "meta": {
+    "name": "string",
+    "type": "enum: 产品 | 公司 | 概念 | 技术 | 人物 | 行业现象 | 其他",
+    "one_line_definition": "string",
+    "domain": "string",
+    "research_date": "date",
+    "researcher": "string",
+    "research_goal": "string"
+  },
+  "vertical_axis": {
+    "origin": {
+      "background": "string",
+      "motivation": "string",
+      "initiators": "string",
+      "start_time": "date",
+      "early_form": "string",
+      "seed_event": "string | null"
+    },
+    "timeline": [
+      {
+        "date": "date",
+        "event": "string",
+        "description": "string",
+        "why_it_mattered": "string",
+        "decision_logic": "string | null",
+        "impact": "string"
+      }
+    ],
+    "stages": [
+      {
+        "name": "string",
+        "time_range": "string",
+        "core_trait": "string",
+        "core_tension": "string",
+        "key_decisions": ["string"],
+        "stage_result": "string"
+      }
+    ],
+    "path_dependence": {
+      "locking_decisions": ["string"],
+      "missed_branches": ["string"],
+      "reinforcement_mechanism": "string | null"
+    }
+  },
+  "horizontal_axis": {
+    "analysis_date": "date",
+    "current_position": "string",
+    "strengths": ["string"],
+    "weaknesses": ["string"],
+    "target_users": "string",
+    "business_model": "string | null",
+    "technical_route": "string | null",
+    "market_feedback": {
+      "positive": ["string"],
+      "negative": ["string"],
+      "typical_use_cases": ["string"]
+    },
+    "peers": [
+      {
+        "name": "string",
+        "peer_type": "enum: 直接竞品 | 间接竞品 | 替代方案 | 潜在威胁",
+        "positioning": "string",
+        "strengths": ["string"],
+        "weaknesses": ["string"],
+        "difference": "string",
+        "threat_level": "enum: 高 | 中 | 低"
+      }
+    ],
+    "comparison_dimensions": [
+      {
+        "dimension": "string",
+        "why_it_matters": "string",
+        "object_view": "string",
+        "peer_views": {
+          "peer_name": "string"
+        }
+      }
+    ]
+  },
+  "crossing_insights": {
+    "history_shaped_today": "string",
+    "historical_roots_of_strengths": ["string"],
+    "historical_roots_of_weaknesses": ["string"],
+    "peer_path_comparison": "string",
+    "future_scenarios": {
+      "most_likely": "string",
+      "most_dangerous": "string",
+      "most_optimistic": "string"
+    }
+  },
+  "confidence": {
+    "facts": ["string"],
+    "inferences": ["string"],
+    "unknowns": ["string"]
+  }
+}
