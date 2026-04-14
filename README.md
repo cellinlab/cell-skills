@@ -252,6 +252,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - [小红书标题策略](https://clawhub.ai/cellinlab/cell-xhs-title-selector)
 - [学习路径构建](https://clawhub.ai/cellinlab/cell-learning-builder)
 - [X 内容策略](https://clawhub.ai/cellinlab/cell-x-content-mentor)
+- [X 长文发布](https://clawhub.ai/cellinlab/cell-x-article-publisher)
 - [Paul Graham 视角](https://clawhub.ai/cellinlab/cell-paul-graham-perspective)
 - [Naval 视角](https://clawhub.ai/cellinlab/cell-naval-perspective)
 - [MrBeast 视角](https://clawhub.ai/cellinlab/cell-mrbeast-perspective)
