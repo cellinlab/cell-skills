@@ -1,0 +1,4 @@
+interface:
+  display_name: "X 长文发布"
+  short_description: "把现成 Markdown 长文发布到 X Articles 草稿，并优先同步本机 cookies 给 Playwright"
+  default_prompt: "Use $x-article-publisher to publish this finished Markdown article to X Articles: parse the markdown first, prepare HTML/images/dividers, export local X/Twitter cookies into Playwright storage state if possible, then drive the browser to save a draft without auto-publishing."
