@@ -10,12 +10,19 @@
 先跑：
 
 ```bash
-python3 skills/x-article-publisher/scripts/export_x_cookies.py --output /tmp/x-storage-state.json
+python3 skills/x-article-publisher/scripts/export_x_cookies.py
 ```
 
 如果导出成功但 Playwright 仍未登录，问题通常在“注入”而不是“导出”。
 
 如果确认已经登录但仍然进不了文章编辑器，再检查账号本身是否有 X Articles 能力。
+
+如果当前宿主支持 `--storage-state`，优先排查：
+
+- browser context 是不是在启动前就加载了 cache
+- 是不是先开了未登录 context 再去导航
+
+这两类问题通常比 cookies 导出本身更常见。
 
 ## 2. 打开的是文章列表页，不是编辑器
 
@@ -28,7 +35,21 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py --output /tmp/x-s
 
 不要在还没点创建入口时，就把“看不到标题框”判断成选择器失败。
 
-## 3. 图片位置不对
+## 3. cache 明明存在，但还是重复导出
+
+先检查：
+
+- cache 文件是不是在 `~/.cache/x-article-publisher/x-storage-state.json`
+- `auth_token` 和 `ct0` 是否仍在 cache 中
+- cache 文件修改时间有没有超过默认的 12 小时
+
+如果就是要强制刷新，显式跑：
+
+```bash
+python3 skills/x-article-publisher/scripts/export_x_cookies.py --no-cache
+```
+
+## 4. 图片位置不对
 
 先检查：
 
@@ -37,7 +58,7 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py --output /tmp/x-s
 
 不要回退到模糊的文字匹配。
 
-## 4. 远程图片上传失败
+## 5. 远程图片上传失败
 
 如果 Markdown 里用的是 `https://...` 图片：
 
@@ -46,11 +67,11 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py --output /tmp/x-s
 
 X Articles 上传阶段需要的是本地文件，不是远程 URL。
 
-## 5. 表格显示异常
+## 6. 表格显示异常
 
 优先把表格转图片，再插入 X Articles。
 
-## 6. 粘贴后格式丢失
+## 7. 粘贴后格式丢失
 
 通常是：
 
@@ -59,7 +80,7 @@ X Articles 上传阶段需要的是本地文件，不是远程 URL。
 
 先确认 `copy_to_clipboard.py html` 成功执行。
 
-## 7. Playwright 工具不可用
+## 8. Playwright 工具不可用
 
 如果宿主里没有可用的浏览器自动化工具：
 

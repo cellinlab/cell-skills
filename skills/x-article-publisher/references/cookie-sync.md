@@ -15,13 +15,15 @@
 运行：
 
 ```bash
-python3 skills/x-article-publisher/scripts/export_x_cookies.py --output /tmp/x-storage-state.json
+python3 skills/x-article-publisher/scripts/export_x_cookies.py
 ```
 
 默认行为：
 
 - 默认只从 Chrome 读取 cookies
 - 只导出 `x.com` / `twitter.com` 及其子域 cookies
+- 默认输出到 `~/.cache/x-article-publisher/x-storage-state.json`
+- 默认会先检查已有 cache 是否仍然有效
 - 输出成 Playwright storage state JSON
 
 如果你的登录态在其他浏览器里，再显式传：
@@ -30,7 +32,19 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py --output /tmp/x-s
 python3 skills/x-article-publisher/scripts/export_x_cookies.py \
   --browser edge \
   --browser firefox \
-  --output /tmp/x-storage-state.json
+  --no-cache
+```
+
+如果你就是想强制重新读取浏览器 cookies：
+
+```bash
+python3 skills/x-article-publisher/scripts/export_x_cookies.py --no-cache
+```
+
+如果你想调短 cache 的有效期：
+
+```bash
+python3 skills/x-article-publisher/scripts/export_x_cookies.py --max-age-hours 4
 ```
 
 ## 3. 成功后得到什么
@@ -44,6 +58,12 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py \
 
 对 X/Twitter 登录态来说，cookies 通常已经足够覆盖大多数场景。
 
+cache 有效性的默认判断包括：
+
+- 文件存在
+- 文件修改时间没有超过 `--max-age-hours`
+- `auth_token` 和 `ct0` 两个关键 auth cookies 仍然存在且未过期
+
 ## 4. 运行时如何使用
 
 如果当前宿主支持在 Playwright 上下文创建前加载 storage state：
@@ -52,8 +72,17 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py \
 
 典型方式是：
 
-- `browser.new_context(storage_state="/tmp/x-storage-state.json")`
+- `browser.new_context(storage_state="~/.cache/x-article-publisher/x-storage-state.json")`
 - 或 Playwright CLI / MCP 里等价的 storage state 注入入口
+
+如果你在用 `playwright-mcp`，优先在启动时预加载，而不是先打开一个未登录 context：
+
+```bash
+npx @playwright/mcp@latest \
+  --storage-state ~/.cache/x-article-publisher/x-storage-state.json
+```
+
+这比“先打开页面，再补注入 cookies”更稳，因为首个请求就会带着登录态发出去。
 
 如果当前宿主只支持打开一个现成浏览器标签，但不支持 cookie 注入：
 
@@ -70,6 +99,13 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py \
 - 宿主浏览器自动化工具不支持导入 storage state
 - 导入后仍然打开的是未登录页面
 
+更稳的顺序通常是：
+
+1. 先打开 `https://x.com/home` 探测当前 context 是否已登录
+2. 未登录时，优先重建为带 `--storage-state` 的 context
+3. cache 失效时，再用 `--no-cache` 重新导出
+4. 还是失败，最后才人工登录
+
 回退时要明确说清：
 
 - cookies 是否导出成功
@@ -82,5 +118,15 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py \
 默认不要：
 
 - 把 cookies 提交到仓库
-- 把 storage state 长期保存在公开目录
+- 把 storage state 存进仓库工作区
 - 在回复里直接展示敏感 cookie 值
+
+如果你在自定义 Playwright 自动化脚本里成功完成了登录或注入，也可以把最新状态保存回同一个 cache 文件，例如：
+
+```js
+await context.storageState({
+  path: `${process.env.HOME}/.cache/x-article-publisher/x-storage-state.json`,
+});
+```
+
+这样下次 browser context 启动时可以继续复用。

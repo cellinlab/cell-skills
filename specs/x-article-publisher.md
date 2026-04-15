@@ -12,6 +12,7 @@
 - 通过浏览器自动化工具把内容送进 X Articles 编辑器
 - 默认只保存草稿，不自动发布
 - 在浏览器自动化开始前，优先把本机浏览器里的 X/Twitter 登录 cookies 同步给 Playwright，减少手动登录
+- 默认把 storage state 持久化到用户 cache 目录，并优先复用有效 cache，而不是每次重新导出
 
 这个 Skill 的价值在于把“Markdown -> X Articles 草稿”这条链路做稳，而不是扩成 X 内容策略或写作 Skill。
 
@@ -32,6 +33,7 @@
 - 先按本仓库规范补 `specs/`，再落 `skills/`
 - 把“cookie 同步到 Playwright”作为正式能力，而不是临时 workaround
 - 增加 browser-cookie3 -> Playwright storage state 的脚本支持
+- 把持久化 cache 和 `playwright-mcp --storage-state` 预加载作为默认建议路径
 - 明确和 `x-content-mentor` 的边界：这个 Skill 负责发布，不负责选题和写作
 - 运行层文档只保留执行规则，不保留上游来源叙述
 
@@ -177,6 +179,12 @@ V1 默认不解决以下问题：
 ### 12.2 登录态问题优先在浏览器启动前解决
 
 如果 Playwright 上来就是未登录状态，后面的自动化基本都会失效。优先尝试 cookies 同步。
+
+更稳的做法是：
+
+- 先复用持久化 storage state cache
+- 在创建 browser context 前就加载 storage state
+- 只有 cache 失效时，才重新导出 cookies
 
 ### 12.3 cookie 同步是优先路径，不是唯一真理
 

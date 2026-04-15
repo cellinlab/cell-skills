@@ -43,20 +43,30 @@ python3 skills/x-article-publisher/scripts/parse_markdown.py article.md
 
 稳定顺序如下：
 
-1. 打开 X Articles 编辑器或文章列表页
-2. 确认登录态
-3. 如果当前是列表页，先点 `Create` / `Write`
-4. 上传封面
-5. 填标题
-6. 粘贴 HTML 正文
-7. 反向插入正文图片
-8. 反向插入分割线
-9. 保存草稿
+1. 先确认可复用的 storage state cache 是否存在且有效
+2. 用带 `storage_state` 的 browser context 启动浏览器
+3. 先打开 `https://x.com/home` 探测当前 context 是否已登录
+4. 再打开 X Articles 编辑器或文章列表页
+5. 如果当前是列表页，先点 `Create` / `Write`
+6. 上传封面
+7. 填标题
+8. 粘贴 HTML 正文
+9. 反向插入正文图片
+10. 反向插入分割线
+11. 保存草稿
 
 如果迟迟看不到编辑器，要先怀疑两件事：
 
 - 当前账号没有 X Articles 能力
 - 实际落在的是文章列表页，还没点创建按钮
+
+不要把顺序写反成：
+
+1. 先开一个未登录 context
+2. 直接导航到编辑器
+3. 再尝试补注入 cookies
+
+这种顺序很容易让首个请求直接落到登录页，然后后续状态变得混乱。
 
 ## 4. 先文后图后分割线
 

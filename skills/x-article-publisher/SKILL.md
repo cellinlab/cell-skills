@@ -49,11 +49,11 @@ python3 skills/x-article-publisher/scripts/parse_markdown.py article.md
 python3 skills/x-article-publisher/scripts/parse_markdown.py article.md --save-html /tmp/x-article.html --output json
 python3 skills/x-article-publisher/scripts/copy_to_clipboard.py html --file /tmp/x-article.html
 
-# 导出 X/Twitter cookies 到 Playwright storage state
-python3 skills/x-article-publisher/scripts/export_x_cookies.py --output /tmp/x-storage-state.json
+# 导出或复用 X/Twitter cookies 缓存
+python3 skills/x-article-publisher/scripts/export_x_cookies.py
 
-# 如果登录态不在 Chrome，再显式指定浏览器
-python3 skills/x-article-publisher/scripts/export_x_cookies.py --browser edge --output /tmp/x-storage-state.json
+# 强制刷新缓存，或从其他浏览器读取
+python3 skills/x-article-publisher/scripts/export_x_cookies.py --no-cache --browser edge
 ```
 
 ## Default Contract
@@ -65,6 +65,8 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py --browser edge --
 - 目标平台是 X Articles，不是普通 tweet / thread
 - 默认只保存草稿，不自动发布
 - 默认优先尝试 cookie 同步，再回退到人工登录
+- 默认把 storage state 持久化到 `~/.cache/x-article-publisher/x-storage-state.json`
+- 默认优先复用有效缓存，而不是每次重新扫描 Chrome cookies
 - 如果运行环境没有浏览器自动化能力，就先把中间文件和 cookies 准备好，不假装已经发布成功
 - 表格和 Mermaid 如需稳定呈现，应先转成图片再进入发布流程
 
@@ -102,6 +104,7 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py --browser edge --
 
 - 从本机浏览器导出 `x.com` / `twitter.com` cookies
 - 转成 Playwright storage state JSON
+- 默认先检查持久化 cache 是否仍然有效
 - 如果当前宿主支持 storage state / cookie 注入，在创建 browser context 前优先加载
 - 如果宿主不支持，或注入后仍未登录，再回退到人工登录
 
@@ -114,14 +117,15 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py --browser edge --
 发布顺序不要乱：
 
 1. 打开 X Articles 编辑器或文章列表页
-2. 确认是否已登录
-3. 如果落在列表页，先点 `Create` / `Write`
-4. 上传封面图
-5. 填标题
-6. 通过剪贴板粘贴 HTML 正文
-7. 按 `block_index` 反向插入正文图片
-8. 按 `block_index` 反向插入分割线
-9. 保存草稿
+2. 先探测当前 browser context 是否已经登录
+3. 如果未登录，优先重建为带 `storage_state` 的 context，而不是先硬导航到编辑器
+4. 如果落在列表页，先点 `Create` / `Write`
+5. 上传封面图
+6. 填标题
+7. 通过剪贴板粘贴 HTML 正文
+8. 按 `block_index` 反向插入正文图片
+9. 按 `block_index` 反向插入分割线
+10. 保存草稿
 
 这里最重要的是两点：
 
