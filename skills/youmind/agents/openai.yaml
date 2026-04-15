@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouMind CLI"
+  short_description: "通过官方 YouMind CLI 发现接口、查看 schema，并安全调用 YouMind API"
+  default_prompt: "Use $youmind to handle this YouMind task through the official CLI: prefer the official youmind binary, verify authentication, search for the right API when needed, inspect the schema before non-trivial writes, then call the endpoint and report the result clearly."

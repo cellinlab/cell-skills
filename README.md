@@ -79,6 +79,8 @@ pre-commit run --all-files
   - 面向 X/Twitter 的内容策略与账号诊断，把选题、写作、审阅、增长与账号复盘串成一个路由式工作流
 - `skills/x-article-publisher`
   - 面向 X Articles 的长文发布，把现成 Markdown 转成可粘贴富文本与图片定位数据，并优先把本机 X/Twitter cookies 同步给 Playwright
+- `skills/youmind`
+  - 面向 YouMind CLI / OpenAPI 调用，通过 `search -> info -> call` 工作流管理 boards、crafts、notes、picks 等 YouMind 内容能力
 - `skills/paul-graham-perspective`
   - 面向创业、写作、产品与独立思考的 Paul Graham 顾问型视角 Skill
 - `skills/naval-perspective`
@@ -113,6 +115,7 @@ pre-commit run --all-files
 - 标题、摘要、开头、结尾等文案生成与优化
 - X/Twitter 选题、写作、审阅、增长与账号诊断
 - X Articles 长文草稿发布、图片定位与 Playwright 登录态准备
+- YouMind CLI 安装、OpenAPI 接口发现、schema 查看与内容管理调用
 - 小红书标题策略与公式匹配
 - 小红书封面、轮播图与信息图方向设计
 - 微信公众号草稿箱发布、排版检查与发布故障排查
@@ -229,6 +232,7 @@ cp -R ./skills/deep-writer /path/to/your-workspace/skills/
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/perspective-distiller`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/x-content-mentor`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/x-article-publisher`
+- `https://github.com/cellinlab/cell-skills/tree/main/skills/youmind`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/paul-graham-perspective`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/naval-perspective`
 - `https://github.com/cellinlab/cell-skills/tree/main/skills/mrbeast-perspective`
