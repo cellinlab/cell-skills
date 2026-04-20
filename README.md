@@ -101,6 +101,8 @@ pre-commit run --all-files
   - 面向线下分享、技术演讲、教程视频与 PPT 审查的演讲结构教练 Skill
 - `skills/xhs-image-director`
   - 面向小红书封面、轮播图与信息图的配图导演 Skill，强调先提案、后生成、再审查
+- `skills/cc-design`
+  - 面向高保真 HTML 设计与原型工作流，覆盖落地页、演示稿、移动端 mockup、交互原型、视觉方向探索与导出准备
 - `skills/wechat-draft-publisher`
   - 面向微信公众号草稿发布，把现成 Markdown / 文章内容做发布前检查、排版推送、图片上传与故障排查，明确不负责选题和写作
 - `skills/horizontal-vertical-analysis`
@@ -118,6 +120,7 @@ pre-commit run --all-files
 - YouMind CLI 安装、OpenAPI 接口发现、schema 查看与内容管理调用
 - 小红书标题策略与公式匹配
 - 小红书封面、轮播图与信息图方向设计
+- 高保真 HTML 设计、落地页、演示稿与交互原型
 - 微信公众号草稿箱发布、排版检查与发布故障排查
 - 人物 / 主题视角蒸馏与认知框架提炼
 - 创业、产品、内容、组织等具体人物视角问答

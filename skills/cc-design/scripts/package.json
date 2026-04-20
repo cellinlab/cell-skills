@@ -1,0 +1,14 @@
+{
+  "name": "cc-design-scripts",
+  "private": true,
+  "description": "Export utility scripts for cc-design skill",
+  "scripts": {
+    "pptx": "node gen_pptx.js",
+    "inline": "node super_inline_html.js",
+    "pdf": "node open_for_print.js"
+  },
+  "dependencies": {
+    "playwright": "^1.53.0",
+    "pptxgenjs": "^3.12.0"
+  }
+}
