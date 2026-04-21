@@ -1,4 +1,4 @@
 interface:
   display_name: "CC Design"
   short_description: "高保真 HTML 设计与原型工作流"
-  default_prompt: "Use $cc-design to explore 3 strong HTML-based design directions for this page or feature, grounded in the existing product style if available."
+  default_prompt: "Use $cc-design to first propose 3 distinct HTML-based design directions for this page or feature, grounded in the existing product style if available; if the context is clear, build the strongest direction and verify it before delivery."

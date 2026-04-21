@@ -8,6 +8,14 @@
 2. 再抽取其中真正可复用的层级、布局、留白、配色或呈现方式
 3. 最后结合当前项目上下文做改写，而不是直接临摹
 
+如果你正在走 `design-direction-advisor.md`：
+
+- `Swiss / Structured` 可优先看 `product-pages/stripe-homepage.md`
+- `Dark Precision` 可优先看 `product-pages/linear-features.md`
+- `Editorial / Human` 可优先看 `product-pages/notion-landing.md`
+- 演示稿节奏可优先看 `presentations/keynote-style.md`
+- 移动端引导可优先看 `mobile-apps/ios-onboarding.md`
+
 当前收录：
 
 ## Product Pages

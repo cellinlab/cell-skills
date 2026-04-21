@@ -7,35 +7,43 @@
 
 ## Question Groups
 
-Ask these in order. Skip any group where the user already provided the answer. Use concise, concrete questions with 2-4 options when the host supports structured choice prompts; otherwise ask the equivalent in plain language.
+Ask these in order. Skip any group where the user already provided the answer. Prefer one batched question set instead of a back-and-forth drip feed.
 
-### Group 1: Output format
-
-| Question | Options | Why |
-|----------|---------|-----|
-| What format should this be? | A) Slide deck (1920x1080 fixed canvas) / B) Landing page (responsive) / C) Mobile screen mockup / D) Interactive prototype | Determines routing, template, and scaling rules |
-| How many screens/slides? | A) 1-3 / B) 4-8 / C) 10+ | Affects navigation complexity and file structure |
-| Fidelity level? | A) Wireframe (layout only) / B) Medium (real copy, placeholder images) / C) High-fidelity (pixel-level) | Determines effort and asset requirements |
-
-### Group 2: Visual direction
+### Group 1: Design Context
 
 | Question | Options | Why |
 |----------|---------|-----|
-| Visual mood? | A) Minimal / clean / B) Bold / vibrant / C) Warm / friendly / D) Technical / precise | Maps to font + color choices in frontend-design.md |
-| Brand or reference? | A) I have a brand guide / B) I have a reference URL / C) Start from scratch | Determines whether to reuse existing design system |
-| Dark or light mode? | A) Light / B) Dark / C) Both (toggle) | Affects contrast calculations and asset preparation |
+| Is there an existing design system, UI kit, token file, or codebase? | A) Yes, reuse it / B) Only screenshots or references / C) No, start fresh | Decides whether to reuse or fall back |
+| Do we have brand assets or reference material? | A) Brand guide / B) URL or screenshots / C) Specific brand to study / D) Nothing yet | Routes to `design-context.md` and possibly `brand-asset-protocol.md` |
+| Does the task mention a real product or brand? | A) Yes, specific product / B) Yes, general brand style / C) No | Determines whether fact verification and asset protocol are needed |
 
-### Group 3: Technical constraints
+### Group 2: Deliverable Shape
 
 | Question | Options | Why |
 |----------|---------|-----|
-| Needs to be responsive? | A) Fixed size only / B) Responsive (mobile + desktop) | Fixed-size uses deck_stage scaling; responsive uses CSS breakpoints |
-| Export needed? | A) Just preview / B) PPTX / C) PDF / D) Self-contained HTML | Loads platform-tools.md for export scripts |
-| Accessibility requirements? | A) Standard (readable text) / B) WCAG AA / C) WCAG AAA | Affects contrast ratios, hit targets, alt text |
+| What format should this be? | A) Slide deck / B) Landing page / C) Mobile mockup / D) Interactive prototype / E) Visual direction only | Determines routing, template, and verification style |
+| How many screens or directions? | A) 1-3 / B) 4-8 / C) 10+ | Affects build strategy and scope |
+| Fidelity level? | A) Wireframe / B) Mid-fi / C) High-fidelity | Determines effort and polish level |
+
+### Group 3: Variation and Interaction
+
+| Question | Options | Why |
+|----------|---------|-----|
+| Do you want one polished direction or multiple options? | A) One / B) 2-3 options / C) A direction map first | Routes to `design-direction-advisor.md` or tweaks/canvas flow |
+| What should vary? | A) Visual style / B) Layout / C) Density / D) Motion / E) Color only | Prevents meaningless variations |
+| Do you want tweak controls after delivery? | A) No / B) A few key toggles / C) Full variant panel | Determines whether `tweaks-system.md` is needed |
+
+### Group 4: Technical Constraints
+
+| Question | Options | Why |
+|----------|---------|-----|
+| Needs to be responsive? | A) Fixed size / B) Responsive / C) Mobile only | Affects structure and scaling |
+| Export needed? | A) Preview only / B) PPTX / C) PDF / D) Self-contained HTML | Routes to export constraints early |
+| Accessibility requirement? | A) Standard / B) WCAG AA / C) Higher than AA | Affects contrast, sizing, and touch targets |
 
 ## Convergence Rule
 
-After asking Group 1-3, you should have enough to route and build. If scope is still unclear after one round of questions, ask one targeted follow-up, then proceed with the best assumption. Do not ask more than 2 rounds total.
+After asking these groups, you should have enough to route and build. If scope is still unclear after one round, ask one targeted follow-up, then proceed with the best safe assumption. Do not keep the user in endless clarification.
 
 ## Assumption Defaults
 
@@ -43,10 +51,11 @@ When the user skips a question, apply these defaults:
 
 | Unanswered | Default |
 |------------|---------|
-| Format | Slide deck (most common) |
+| Context | Search the workspace first, then assume no system only if nothing is found |
+| Format | Landing page or screen-level artifact that best matches the request |
 | Fidelity | Medium |
-| Visual mood | Minimal (lowest risk of AI slop) |
-| Brand | Start from scratch + frontend-design.md |
-| Responsive | Fixed size |
+| Variation | One strong direction unless user asks for options |
+| Brand | Start from current project context; otherwise use `frontend-design.md` |
+| Responsive | Match the most likely real usage for the output |
 | Export | Just preview |
 | Accessibility | Standard |

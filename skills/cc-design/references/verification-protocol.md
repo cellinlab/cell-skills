@@ -51,6 +51,19 @@ Run these after Phase 1 passes. Requires human judgment via screenshot review.
 4. If all pass → proceed to Deliver step
 ```
 
+## Phase 3: Task-Specific Verification
+
+After structural and visual checks, add the checks that match the artifact type:
+
+| Artifact | Extra checks |
+|---|---|
+| Mobile / interactive prototype | Click through the core path once; verify state switches, navigation, and no dead buttons on the main route |
+| Multi-option design board | Verify labels are visible and each option is genuinely different |
+| Slide deck | Check first slide, one middle slide, and last slide; confirm scaling and readable type on all three |
+| Exported asset | Verify the target file actually exists and matches the expected format |
+
+For prototypes, do not stop at a static screenshot if the main value is interaction.
+
 ## Fix Loop
 
 The verification loop is strict:

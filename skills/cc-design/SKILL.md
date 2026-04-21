@@ -1,6 +1,6 @@
 ---
 name: cc-design
-description: "High-fidelity HTML design and prototype skill for landing pages, slide decks, mobile mockups, interactive prototypes, dashboard explorations, and UI direction work. Use when Codex needs to design a screen, make an interface look polished, explore multiple visual directions, adapt an existing brand style, or deliver a reviewable HTML-based visual artifact. Also use when the user mentions presentations, design systems, wireframes, UI mockups, motion studies, or asks to 'make it look good'. Do not trigger for pure content strategy, pure writing, or bitmap image generation alone."
+description: "High-fidelity HTML design and prototype skill for landing pages, slide decks, mobile mockups, interactive prototypes, dashboard explorations, design-direction advising, and design review work. Use when Codex needs to design a screen, make an interface look polished, explore multiple visual directions, recommend a style direction before building, adapt an existing brand style, critique a design, or deliver a reviewable HTML-based visual artifact. Also use when the user mentions presentations, design systems, wireframes, UI mockups, motion studies, design philosophy, style selection, or asks to 'make it look good'. Do not trigger for pure content strategy, pure writing, or bitmap image generation alone."
 metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree/main/skills/cc-design"}}
 ---
 
@@ -43,7 +43,11 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 | 任务类型 | 先读什么 | 可复用模板 | 重点检查 |
 |---|---|---|---|
 | 任意设计任务 | `references/design-excellence.md` | - | 视觉层级是否成立 |
+| 任务模糊 / 需要先选风格 | `references/design-direction-advisor.md` | `assets/templates/design_canvas.jsx` 可选 | 3 个方向是否真的不同 |
+| 需要设计评审 | `references/design-review-guide.md` | - | 反馈是否可执行 |
 | 没有现成设计系统 | `references/frontend-design.md` | 按场景选择 | 是否落入通用 AI 风 |
+| 有现成设计系统 / 代码 / 品牌资产 | `references/design-context.md` | 按场景选择 | 是否真的复用了上下文 |
+| 具体品牌 / 产品任务 | `references/brand-asset-protocol.md` + `references/brand-style-loader.md` | 按场景选择 | 事实和资产是否核实 |
 | 品牌风格克隆 | `references/brand-style-loader.md` | 按场景选择 | 品牌气质是否对味 |
 | Landing page / 产品页 | `references/design-patterns.md` | `assets/templates/browser_window.jsx` 可选 | 响应式与首屏层级 |
 | Slide deck | `references/starter-components.md` | `assets/templates/deck_stage.js` | 固定画布缩放与翻页 |
@@ -61,12 +65,24 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 - 输出语言：中文说明
 - 核心交付：HTML 文件
 - 默认优先复用现有设计上下文，而不是凭空发明新风格
+- 如果任务提到真实品牌或产品，默认先核实事实与资产，再设计
 - 如果没有设计系统，先用可控 token 和字体组合建立视觉基线
+- 如果需求模糊，默认先提 3 个方向而不是直接拍板
 - 默认至少提供 2-3 个方向中的一个可比较入口，或通过 tweaks 暴露变化
 - 交付前默认检查 console、结构和截图
 - 需要导出时，优先导出 PDF / PPTX / 单文件 HTML，而不是口头说“可以导出”
 
 ## Workflow
+
+### Step 0: Verify Facts for Real-World Entities
+
+如果任务里出现了具体品牌、产品、公司或已命名服务：
+
+- 先核实它是否存在、是否已发布、当前形态是什么
+- 先找 logo、产品图、UI 截图或官方资产
+- 不要直接凭印象写“像某某品牌”
+
+需要时读 [references/brand-asset-protocol.md](references/brand-asset-protocol.md)。
 
 ### Step 1: Scope the Request
 
@@ -77,6 +93,7 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 - 保真度要到什么程度
 - 有没有现成品牌或参考对象
 - 是否需要导出
+- 是先做方向建议，还是直接做成品
 
 如果信息不够，读 [references/question-protocol.md](references/question-protocol.md)。
 
@@ -91,6 +108,8 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 
 已有系统时，优先复用它的颜色、字体、间距、圆角、阴影和组件语言。
 
+如果上下文很少，先读 [references/design-context.md](references/design-context.md)。
+
 ### Step 3: Lock the Visual Intent
 
 写代码之前，先用 [references/design-excellence.md](references/design-excellence.md) 的思路回答这些问题：
@@ -104,7 +123,23 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 
 如果没有设计系统，再读 [references/frontend-design.md](references/frontend-design.md)。
 
-### Step 4: Build with the Right Level of Structure
+如果用户还没能决定方向，不要硬做，先读 [references/design-direction-advisor.md](references/design-direction-advisor.md)。
+
+### Step 4: Work Like a Junior Designer, Not a Black Box
+
+开始实现时，不要直接闷头做完整稿。
+
+优先做：
+
+- 一版 assumptions + placeholder
+- 一次早期展示
+- 用户确认后的主版本推进
+- 中途再展示一次
+- 最后才做 polish
+
+需要更细流程时，读 [references/junior-designer-workflow.md](references/junior-designer-workflow.md)。
+
+### Step 5: Build with the Right Level of Structure
 
 按场景选择最省力的方式：
 
@@ -117,7 +152,7 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 
 如果要写 React 内联原型，读 [references/react-babel-setup.md](references/react-babel-setup.md)。
 
-### Step 5: Add Variation without File Explosion
+### Step 6: Add Variation without File Explosion
 
 如果用户要多个方向，不要默认拆成一堆 HTML。
 
@@ -128,7 +163,7 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 
 需要时读 [references/tweaks-system.md](references/tweaks-system.md)。
 
-### Step 6: Verify Before Delivery
+### Step 7: Verify Before Delivery
 
 完成后必须做验证，不要“写完即交”。
 
@@ -141,7 +176,15 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 
 详细流程见 [references/verification-protocol.md](references/verification-protocol.md)。
 
-### Step 7: Export Only When Needed
+### Step 8: Review When Asked, Export When Needed
+
+如果用户要求 review、比较多个方向、或交付前做专家审查：
+
+- 从方向匹配、层级、做工、功能性、辨识度 5 个维度看
+- 给出可执行问题，不要只说“还差点意思”
+- 最后附 `Quick Wins`
+
+需要时读 [references/design-review-guide.md](references/design-review-guide.md)。
 
 如果用户需要导出，再读 [references/platform-tools.md](references/platform-tools.md) 并调用脚本：
 
@@ -154,7 +197,9 @@ metadata: {"openclaw":{"homepage":"https://github.com/cellinlab/cell-skills/tree
 Do not:
 
 - 在已有设计系统时无视上下文另起炉灶
+- 在真实品牌 / 产品任务里跳过事实核验和资产采集
 - 把视觉任务做成普通模板页
+- 在需求模糊时直接默认一个 generic 方向
 - 用一堆花哨效果掩盖信息层级问题
 - 明明需要多方向，却只给一个含糊方案
 - 没截图、没检查就直接交付
@@ -164,7 +209,9 @@ Always:
 
 - 先明确输出类型和约束
 - 先搜上下文，再设计
+- 具体品牌任务先核实事实与资产
 - 先做视觉判断，再写代码
+- 在大任务里先给 assumptions / placeholder，再继续
 - 需要模板时优先复用模板
 - 交付前至少做一轮结构检查和截图检查
 - 诚实说明哪些导出 / 预览环节已验证，哪些还没验证
@@ -173,6 +220,14 @@ Always:
 
 - [references/question-protocol.md](references/question-protocol.md)
   - 范围不清时，用这个收口需求。
+- [references/design-context.md](references/design-context.md)
+  - 现有系统、代码、截图和品牌上下文的采集顺序。
+- [references/brand-asset-protocol.md](references/brand-asset-protocol.md)
+  - 具体品牌 / 产品任务的事实核验与资产协议。
+- [references/junior-designer-workflow.md](references/junior-designer-workflow.md)
+  - 假设、placeholder、中途回看和分阶段推进。
+- [references/design-direction-advisor.md](references/design-direction-advisor.md)
+  - 需求模糊时先给 3 个方向。
 - [references/design-excellence.md](references/design-excellence.md)
   - 写代码前先做视觉判断。
 - [references/frontend-design.md](references/frontend-design.md)
@@ -195,6 +250,8 @@ Always:
   - 预览、截图、导出路径。
 - [references/verification-protocol.md](references/verification-protocol.md)
   - 结构 / 视觉验证流程。
+- [references/design-review-guide.md](references/design-review-guide.md)
+  - 设计 review 的 5 维度和 quick wins 输出。
 - [references/case-studies/README.md](references/case-studies/README.md)
   - 典型案例入口。
 - [assets/templates/deck_stage.js](assets/templates/deck_stage.js)

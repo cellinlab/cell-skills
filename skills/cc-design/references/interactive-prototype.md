@@ -7,6 +7,15 @@
 
 ## Navigation Patterns
 
+Before choosing a navigation pattern, decide what kind of prototype this is:
+
+- `Overview board`
+  - Best when the goal is to compare multiple screens or states side by side
+- `Flow demo`
+  - Best when the goal is to click through one path end to end
+
+Do not build a fully interactive flow when the user only needs a screen overview, and do not fake a flow with disconnected static cards when the user explicitly wants clickable behavior.
+
 Choose based on the app type. Each pattern includes a React + Babel implementation snippet.
 
 ### Tab Bar (mobile apps, 3-5 main sections)
@@ -86,6 +95,27 @@ React.useEffect(() => {
 }, []);
 // Navigate: location.hash = '#settings'
 ```
+
+## Mobile Mockup Rules
+
+For mobile prototypes:
+
+- Prefer `ios_frame.jsx` or `android_frame.jsx` instead of hand-drawing the shell
+- Respect safe areas, tap targets, and obvious navigation conventions
+- Use realistic content density for the product type
+- Avoid filling every screen with decorative cards that say nothing about the product
+
+If the product is data-heavy, the screen should visibly carry that density. If it is content-first, typography and reading rhythm should lead.
+
+## Verification Rule
+
+Before delivery, click through the primary path at least once:
+
+- entry screen
+- one mid-flow state
+- one success or destination state
+
+If that path is broken, the prototype is not done.
 
 ## Transitions
 
