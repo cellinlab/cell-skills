@@ -89,3 +89,18 @@ X Articles 上传阶段需要的是本地文件，不是远程 URL。
 - 明确告诉用户“浏览器自动化这一步当前环境不能执行”
 
 不要假装已经保存成草稿。
+
+## 9. 分割线插入失败
+
+先确认入口是否找对：分割线在「插入」下拉里，不在「正文」块类型下拉里。
+
+已知坑：
+
+- `---` Markdown shortcut 不会在 X Articles 里自动转成 HR，别试。
+- 粘贴 `<hr>` HTML 会被剥离，别试。
+- JS-only 的 `composer.focus()` + `Meta+v` 看似有效但不触发 autosave：DOM 上可能有完整块，刷新页面后正文为空。必须用 Playwright 的 `browser_click(ref)` 真点编辑器，再 `Meta+v`，再等 3-5 秒，看草稿列表预览出现首句话才算成功。
+- 「插入」按钮只能用真点击。JS `button.click()` 在这个按钮上会触发文件选择器，而不是弹出菜单。
+- `parse_markdown.py` 下载远程封面图到 `/var/folders/.../x-article-publisher-images/...` 时，这条路径不在 Playwright MCP allowed roots 内。先 `cp` 到 `/Users/cell/.playwright-mcp/<name>.jpg` 再上传。
+- 剪贴板可能被外部覆盖。`copy_to_clipboard.py` 和 `Meta+v` 之间如果隔了用户操作或别的进程，可能粘到错的内容。粘完立刻校验首段是否匹配；不匹配就重新 copy 再粘。
+
+插入后用 `[role="separator"]` 计数校验，数量必须等于 Markdown 里的 `---` 数量，并且每个 separator 都在对应 H2 前一格。
