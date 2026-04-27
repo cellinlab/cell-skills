@@ -5,8 +5,8 @@ Parse Markdown for X Articles publishing.
 Extracts:
 - title
 - cover image
-- content images with block_index
-- dividers with block_index
+- content images with block_index/editor_block_index
+- dividers with block_index/editor_block_index
 - rich-text HTML content
 """
 
@@ -213,13 +213,20 @@ def extract_images_and_dividers(markdown: str, base_path: Path) -> tuple[list[di
         stripped = block.strip()
 
         if stripped == "___DIVIDER___":
-            block_index = len(clean_blocks)
+            editor_block_index = len(clean_blocks)
+            block_index = editor_block_index + len(dividers)
             after_text = ""
             if clean_blocks:
                 prev_block = clean_blocks[-1].strip()
                 lines = [line for line in prev_block.split("\n") if line.strip()]
                 after_text = lines[-1][:80] if lines else ""
-            dividers.append({"block_index": block_index, "after_text": after_text})
+            dividers.append(
+                {
+                    "block_index": block_index,
+                    "editor_block_index": editor_block_index,
+                    "after_text": after_text,
+                }
+            )
             continue
 
         match = image_pattern.match(stripped)
@@ -229,6 +236,7 @@ def extract_images_and_dividers(markdown: str, base_path: Path) -> tuple[list[di
             full_path, original_path, exists = resolve_image_path(image_path, base_path)
 
             block_index = len(clean_blocks)
+            editor_block_index = block_index
             after_text = ""
             if clean_blocks:
                 prev_block = clean_blocks[-1].strip()
@@ -242,6 +250,7 @@ def extract_images_and_dividers(markdown: str, base_path: Path) -> tuple[list[di
                     "exists": exists,
                     "alt": alt_text,
                     "block_index": block_index,
+                    "editor_block_index": editor_block_index,
                     "after_text": after_text,
                 }
             )

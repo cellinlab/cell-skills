@@ -159,6 +159,7 @@ Do not:
 - 跳过 Markdown 解析直接硬做浏览器操作
 - 明明能做 cookie 同步却每次都让用户手动登录
 - 发现宿主不支持 cookie 注入时还假装“已经同步成功”
+- 假定 X Articles 不支持分割线；分割线在「插入」下拉里，不在「正文」块类型下拉里
 
 Always:
 
@@ -166,6 +167,7 @@ Always:
 - 优先尝试 cookie 同步
 - 默认只保存草稿
 - 把 block index 当作图片/分割线定位依据
+- 插入分割线时打开 aria-label 为 `添加媒体内容`、文字为「插入」的下拉，再选择文字精确等于「分割线」的 `[role="menuitem"]`
 - 诚实说明当前运行环境能不能真正把 cookies 注入到 Playwright
 
 ## Resource Map
