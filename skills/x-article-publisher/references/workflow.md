@@ -47,8 +47,8 @@ python3 skills/x-article-publisher/scripts/parse_markdown.py article.md
 1. 先确认可复用的 storage state cache 是否存在且有效
 2. 用带 `storage_state` 的 browser context 启动浏览器
 3. 先打开 `https://x.com/home` 探测当前 context 是否已登录
-4. 再打开 X Articles 编辑器或文章列表页
-5. 如果当前是列表页，先点 `Create` / `Write`
+4. 再打开 `https://x.com/compose/articles` 进入 X Articles 草稿/列表页
+5. 在草稿页点「撰写」/ `Write` / `Create`
 6. 上传封面
 7. 填标题
 8. 粘贴 HTML 正文
@@ -59,7 +59,9 @@ python3 skills/x-article-publisher/scripts/parse_markdown.py article.md
 如果迟迟看不到编辑器，要先怀疑两件事：
 
 - 当前账号没有 X Articles 能力
-- 实际落在的是文章列表页，还没点创建按钮
+- 实际落在的是草稿列表页，还没点「撰写」/ `Write` / `Create` 按钮
+
+不要从侧边栏、菜单或搜索里猜 X Articles 入口。直接导航到 `https://x.com/compose/articles`；这是文章草稿页，进入后能看到创建/撰写文章的按钮。
 
 不要把顺序写反成：
 

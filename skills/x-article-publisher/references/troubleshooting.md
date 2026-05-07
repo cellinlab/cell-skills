@@ -26,14 +26,16 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py
 
 ## 2. 打开的是文章列表页，不是编辑器
 
-这通常不是脚本坏了，而是页面先落在草稿列表。
+这通常不是脚本坏了，而是 `https://x.com/compose/articles` 先落在文章草稿列表页。
 
 先检查：
 
-- 页面里有没有 `Create` 或 `Write` 按钮
+- 页面里有没有「撰写」/ `Create` / `Write` 按钮
 - 点击后标题输入框是否出现
 
 不要在还没点创建入口时，就把“看不到标题框”判断成选择器失败。
+
+不要从 X 侧边栏或菜单里反复寻找 Articles 入口；直接打开 `https://x.com/compose/articles`。
 
 ## 3. cache 明明存在，但还是重复导出
 

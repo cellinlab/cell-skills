@@ -104,7 +104,8 @@ npx @playwright/mcp@latest \
 1. 先打开 `https://x.com/home` 探测当前 context 是否已登录
 2. 未登录时，优先重建为带 `--storage-state` 的 context
 3. cache 失效时，再用 `--no-cache` 重新导出
-4. 还是失败，最后才人工登录
+4. 登录态确认后，直接打开 `https://x.com/compose/articles` 进入文章草稿页
+5. 还是失败，最后才人工登录
 
 回退时要明确说清：
 
