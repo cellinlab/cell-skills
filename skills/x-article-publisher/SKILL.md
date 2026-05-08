@@ -116,10 +116,10 @@ python3 skills/x-article-publisher/scripts/export_x_cookies.py --no-cache --brow
 
 发布顺序不要乱：
 
-1. 打开 X Articles 编辑器或文章列表页
-2. 先探测当前 browser context 是否已经登录
-3. 如果未登录，优先重建为带 `storage_state` 的 context，而不是先硬导航到编辑器
-4. 如果落在列表页，先点 `Create` / `Write`
+1. 先探测当前 browser context 是否已经登录
+2. 如果未登录，优先重建为带 `storage_state` 的 context，而不是先硬导航到编辑器
+3. 打开 `https://x.com/compose/articles` 进入 X Articles 草稿/列表页
+4. 在草稿页点「撰写」/ `Write` / `Create` 创建文章
 5. 上传封面图
 6. 填标题
 7. 通过剪贴板粘贴 HTML 正文
@@ -159,13 +159,17 @@ Do not:
 - 跳过 Markdown 解析直接硬做浏览器操作
 - 明明能做 cookie 同步却每次都让用户手动登录
 - 发现宿主不支持 cookie 注入时还假装“已经同步成功”
+- 从侧边栏、菜单或搜索里猜 X Articles 入口；直接打开 `https://x.com/compose/articles`
+- 假定 X Articles 不支持分割线；分割线在「插入」下拉里，不在「正文」块类型下拉里
 
 Always:
 
 - 先解析 Markdown，再进浏览器
 - 优先尝试 cookie 同步
 - 默认只保存草稿
+- 用 `https://x.com/compose/articles` 进入 X Articles 草稿页，再点「撰写」/ `Write` / `Create`
 - 把 block index 当作图片/分割线定位依据
+- 插入分割线时打开 aria-label 为 `添加媒体内容`、文字为「插入」的下拉，再选择文字精确等于「分割线」的 `[role="menuitem"]`
 - 诚实说明当前运行环境能不能真正把 cookies 注入到 Playwright
 
 ## Resource Map
